@@ -1,12 +1,107 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
-  </body>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Academy: Седона</title>
+</head>
+<body class="page__body">
+<header class="page-header">
+  <a href="#" class="page-header__logo">
+    <img src="https://via.placeholder.com" alt="логотип сайта седона">
+  </a>
+  <nav class="main-nav">
+    <button type="button" class="main-nav__toggle">
+      <span class="visually-hiden">открыть меню</span>
+    </button>
+    <ul class="main-nav__list site-list">
+      <li class="site-list__item">
+        <a href="#">главная</a>
+      </li>
+      <li class="site-list__item">
+        <a href="photo.html">фото и видео</a>
+      </li>
+      <li class="site-list__item">
+        <a href="form.html">форма отзыва</a>
+      </li>
+      <li class="site-list__item">
+        <a href="#">html academy</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main class="page-main">
+  <section class="header-main">
+    <h1 class="visually-hiden">седона - лучшее место для отдыха</h1>
+    <img src="#" alt="седона">
+  </section>
+  <section class="intro">
+    <h2 class="intro__main title">седона - небольшой городок в аризоне, заслужавающий большего!</h2>
+    <p class="intro__description text">рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
+  </section>
+  <section class="edge">
+    <div class="edge__item">
+      <div class="edge__wrap">
+        <h3 class="title title--white edge__title">Настоящий городок</h3>
+        <span class="edge__number edge__number--white">&mdash; №1 &mdash;</span>
+        <p class="text edge__desc edge__desc--white">Седона не аттракцион для туристов, там течет своя жизнь</p>
+        <img src="#" alt="фото городского мотеля">
+      </div>
+      <ul class="edge__list">
+        <li class="edge__point  edge__point--house">
+          <b class="title">жилье</b>
+          <p class="edge__desc text">рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+        </li>
+        <li class="edge__point">
+          <b class="title">сувениры</b>
+          <p class="edge__desc text">не только китайского, но и местного производства!</p>
+        </li>
+        <li class="edge__point">
+          <b class="title">еда</b>
+          <p class="edge__desc text">всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        </li>
+      </ul>
+    </div>
+    <div class="edge__item">
+      <div class="edge__wrap">
+        <h3 class="title title--white edge__title">там есть мост дьявола</h3>
+        <span class="edge__number edge__number--white">&mdash; №2 &mdash;</span>
+        <p class="text edge__desc edge__desc--white">да, по нему можно пройти! если вы осмелитесь, конечно</p>
+      </div>
+      <img src=#" alt="фото моста дьявола">
+    </div>
+    <div class="edge__item">
+        <div class="edge__wrap  edge__wrap--silver">
+            <h3 class="title edge__title">небольшая площадь</h3>
+            <span class="edge__number">&mdash; №3 &mdash;</span>
+            <p class="text edge__desc">все интересные места находятся очень близко</p>
+        </div>
+    </div>
+    <div class="edge__item">
+        <div class="edge__wrap">
+            <h3 class="title edge__title">красивая дорога</h3>
+            <span class="edge__number">&mdash; №4 &mdash;</span>
+            <p class="text edge__desc">ехать в седону из лас-вегаса совсем не скучно!</p>
+        </div>
+    </div>
+    <div class="edge__item">
+        <div class="edge__wrap">
+            <h3 class="title edge__title">мало туристов</h3>
+            <span class="edge__number">&mdash; №5 &mdash;</span>
+            <p class="text edge__desc">большинство едет в гранд каньон и толпится там</p>
+        </div>
+    </div>
+</section>
+</main>
+<footer class="page-footer">
+    <p class="page-footer__signature">#visitsedona</p>
+    <div class="page-footer__icon-list social-icon">
+      <a class="social-icon__link" aria-label="твитер" href="#"></a>
+      <a class="social-icon__link" aria-label="фейсбук" href="#"></a>
+      <a class="social-icon__link" aria-label="ютуб" href="#"></a>
+    </div>
+    <p>разработано
+      <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="логотип академии"></a>
+    </p>
+</footer>
+</body>
 </html>
