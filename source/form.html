@@ -35,9 +35,76 @@
     <img src="#" alt="седона">
   </section>
   <section class="intro">
-    <h2 class="title intro__main">оставьте свой отзыв</h2>
+    <legend class="title intro__main">оставьте свой отзыв</legend>
     <p class="text intro__description">помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримичательностях</p>
   </section>
+  <form class="review">
+    <fieldset class="review__section">
+      <legend class="review__section-title title">представьтесь:</legend>
+    <div class="review__section-item">
+      <label class="review__section-label text" for="name">имя*:</label>
+      <input class="review__section-input title" type="text" name="name" id="name" placeholder="Петр">
+    </div>
+    <div class="review__section-item">
+      <label class="review__section-label text" for="surname">фамилия*:</label>
+      <input class="review__section-input title" type="text" name="surname" id="surname" placeholder="Иванов">
+    </div>
+    <div class="review__section-item">
+      <label class="review__section-label text" for="patronymic">отчество*:</label>
+      <input class="review__section-input title" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
+    </div>
+    </fieldset>
+    <fieldset class="review__section">
+      <legend class="review__section-title title">контактная информация:</legend>
+    <div class="review__section-item">
+      <label class="review__section-label text" for="contact-number">контактный телефон*:</label>
+      <input class="review__section-input title" type="text" name="contact-number" id="contact-number" placeholder="Введите телефон">
+    </div>
+    <div class="review__section-item">
+      <label class="review__section-label text" for="e-mail">электронная почта*:</label>
+      <input class="review__section-input title" type="text" name="e-mail" id="e-mail" placeholder="Введите e-mail">
+    </div>
+    </fieldset>
+    <fieldset class="review__section">
+      <legend class="review__section-title title">ваше общее впечатление:</legend>
+    <div class="review__section-item">
+      <input class="review__section-input title" type="radio" name="effect" id="positive-effect" value="positive" checked>
+      <label class="review__section-label text" for="positive-effect">скорее положительные</label>
+    </div>
+    <div class="review__section-item">
+      <input class="review__section-input title" type="radio" name="effect" id="negativ-effect" value="negativ">
+      <label class="review__section-label text" for="negativ-effect">скорее отрицательные</label>
+    </div>
+    <div class="review__section-item">
+      <input class="review__section-input title" type="radio" name="effect" id="difficult-effect" value="difficult">
+      <label class="review__section-label text" for="difficult-effect">затрудняюсь ответить</label>
+    </div>
+    </fieldset>
+    <fieldset class="review__section">
+      <legend class="review__section-title title">посещенные достопримечательности:</legend>
+    <div class="review__section-item">
+      <input class="review__section-input title" type="checkbox" name="attractions" id="devil-bridge" value="devil-bridge" checked>
+      <label class="review__section-label text" for="devil-bridge">Мост Дьявола</label>
+    </div>
+    <div class="review__section-item">
+      <input class="review__section-input title" type="checkbox" name="attractions" id="mountain-bell" value="mountain-bell" checked>
+      <label class="review__section-label text" for="mountain-bell">Гора-Колокол</label>
+    </div>
+    <div class="review__section-item">
+      <input class="review__section-input title" type="checkbox" name="attractions" id="slide-park" value="slide-park" checked>
+      <label class="review__section-label text" for="slide-park">Слайд-парк</label>
+    </div>
+    <div class="review__section-item">
+      <input class="review__section-input title" type="checkbox" name="attractions" id="red-rocks" value="red-rocks">
+      <label class="review__section-label text" for="red-rocks">Красные скалы</label>
+    </div>
+    </fieldset>
+    <fieldset class="review__section">
+      <label class="review__section-label review__section-title title" for="letter">опишите свои эмоции:</label>
+      <textarea id="letter" name="letter" class="review__section-textarea title" placeholder="Опишите подробно все свои восторги"></textarea>
+  </fieldset>
+  <button class="intro__button button" type="submit">отправить отзыв</button>
+  </form>
 </main>
 <footer class="page-footer">
   <p class="page-footer__signature">#visitsedona</p>
