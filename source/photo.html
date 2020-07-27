@@ -76,16 +76,22 @@
   <section class="presentation">
     <div class="presentation__text">
       <h2 class="visually-hiden">видеоэкскурсия по городу</h2>
-      <b class="presentation__text-title title">всё ещё сомневаетесь?</b>
-      <p class="presentation__text-desc text">смотрите видеопрезентаию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+      <b class="presentation__title title">всё ещё сомневаетесь?</b>
+      <p class="presentation__desc text">смотрите видеопрезентаию и скорее за билетами, пока они не подорожали в очередной раз!</p>
     </div>
     <div class="presentation__video">
       <img src="#" alt="видеопрезентация по городу седона">
       <div class="controls">
         <div class="controls__top-line">
-          <input class="controls__input" type="range">
+          <div class="controls__scale">
+            <span class="controls__toggle"></span>
+          </div>
         </div>
-        <div class="controls__bottom-line"></div>
+        <div class="controls__bottom-line">
+          <button class="controls__replay" type="button"></button>
+          <button class="controls__subtitles" type="button"></button>
+          <button class="controls__fullscreen" type="button"></button>
+        </div>
       </div>
     </div>
   </section>
