@@ -1,0 +1,161 @@
+.review {
+  margin: 0 auto;
+}
+
+.review__section {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  border-top: 1px solid @gray-light;
+
+  &--sight {
+    padding-bottom: 39px;
+  }
+}
+
+.review__item {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+
+  &--contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  &--radio {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: none;
+    padding-left: 65px;
+    margin-top: 37px;
+    margin-bottom: 42px;
+  }
+
+  &--checkbox {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: none;
+    padding-left: 65px;
+    margin-top: 37px;
+    margin-bottom: 54px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.review__label {
+  &--name {
+    margin-right: 13px;
+  }
+}
+
+.review__input {
+  width: 100%;
+  padding-top: 18px;
+  padding-bottom: 14px;
+  padding-left: 22px;
+  background-color: @gray-light-bg;
+  border: none;
+
+  &--desc {
+    box-sizing: border-box;
+  }
+
+  &--desc::placeholder {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    color: @basic-black;
+  }
+}
+
+.review__radio {
+  display: none;
+
+  &:checked + label::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -65px;
+    width: 21px;
+    height: 21px;
+    background-color: @basic-black;
+    border: 15px solid @gray-light-bg;
+    border-radius: 25px;
+  }
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: -65px;
+      width: 51px;
+      height: 51px;
+      background-color: @gray-light-bg;
+      border-radius: 25px;
+    }
+  }
+}
+
+.review__checkbox {
+  display: none;
+
+  &:checked + label::before {
+    background-image: url("../img/tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      left: -65px;
+      width: 51px;
+      height: 51px;
+      background-color: @gray-light-bg;
+      border-radius: 5px;
+    }
+  }
+}
+
+.review__textarea {
+  width: 280px;
+  min-height: 118px;
+  margin-top: 15px;
+  padding-top: 13px;
+  padding-left: 21px;
+  background-color: @gray-light-bg;
+  border: none;
+  box-sizing: border-box;
+
+  &::placeholder {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    color: @basic-black;
+  }
+}
+
+.review__button {
+  margin-top: 51px;
+  padding-top: 18px;
+  padding-right: 33px;
+  padding-bottom: 14px;
+  padding-left: 33px;
+  cursor: pointer;
+}
