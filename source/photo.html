@@ -6,47 +6,45 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
-  <header class="page-header">
-    <a href="index.html" class="page-header__logo">
-      <img src="img/logo-sedona-mobile.svg" alt="логотип сайта седона">
-    </a>
-    <nav class="main-nav">
-      <button type="button" class="main-nav__toggle">
-        <span class="visually-hidden">открыть меню</span>
-      </button>
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item">
-          <a class="site-list__link" href="index.html">главная</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="photo.html">фото и видео</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="form.html">форма отзыва</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="#">html academy</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main class="page-main">
-    <section class="header-main">
-      <div class="header-main__bg header-main__bg--gallery">
-        <h1 class="visually-hidden">фотогаллерея города седона</h1>
-        <img class="header-main__pic header-main__pic--clip" src="img/text-sedona.svg" alt="седона">
-      </div>
-    </section>
-    <section class="intro">
-      <div class="wrapper">
+  <div class="page-body__wrap">
+    <header class="page-header">
+      <a href="index.html" class="page-header__logo">
+        <img src="img/logo-sedona-mobile.svg" alt="логотип сайта седона">
+      </a>
+      <nav class="main-nav">
+        <button type="button" class="main-nav__toggle">
+          <span class="visually-hidden">открыть меню</span>
+        </button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="photo.html">фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">html academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <section class="header-main">
+        <div class="header-main__bg header-main__bg--gallery">
+          <h1 class="visually-hidden">фотогаллерея города седона</h1>
+          <img class="header-main__pic header-main__pic--clip" src="img/text-sedona.svg" alt="седона">
+        </div>
+      </section>
+      <section class="intro">
         <h2 class="title intro__main">фото и видео</h2>
         <p class="text intro__description">не можете решиться на путешествие из-за курса? фотографии помогут вам забыть о политике и экономике.</p>
-      </div>
-    </section>
-    <section class="gallery">
-      <h2 class="visually-hidden">галлерея</h2>
-      <div class="gallery__post">
-        <div class="wrapper">
+      </section>
+      <section class="gallery">
+        <h2 class="visually-hidden">галлерея</h2>
+        <div class="gallery__post">
           <a class="gallery__photo">
             <img src="img/photo-sunset-mobile@1x.jpg" alt="фотография дороги на закате">
           </a>
@@ -54,9 +52,7 @@
           <p class="gallery__author">Автор фото: Борис</p>
           <button class="gallery__button" type="button">1350</button>
         </div>
-      </div>
-      <div class="gallery__post">
-        <div class="wrapper">
+        <div class="gallery__post">
           <a class="gallery__photo">
             <img src="img/photo-cactus-mobile@1x.jpg" alt="фотография растения">
           </a>
@@ -64,9 +60,7 @@
           <p class="gallery__author">Автор фото: Сергей</p>
           <button class="gallery__button" type="button">143</button>
         </div>
-      </div>
-      <div class="gallery__post">
-        <div class="wrapper">
+        <div class="gallery__post">
           <a class="gallery__photo">
             <img src="img/photo-roads-mobile@1x.jpg" alt="фотография дороги в горах">
           </a>
@@ -74,9 +68,7 @@
           <p class="gallery__author">Автор фото: Петр</p>
           <button class="gallery__button" type="button">96</button>
         </div>
-      </div>
-      <div class="gallery__post">
-        <div class="wrapper">
+        <div class="gallery__post">
           <a class="gallery__photo">
             <img src="img/photo-bridge-mobile@1x.jpg" alt="фотография моста дьявола">
           </a>
@@ -84,35 +76,31 @@
           <p class="gallery__author">Автор фото: Антон</p>
           <button class="gallery__button" type="button">254</button>
         </div>
-      </div>
-    </section>
-    <section class="presentation">
-      <div class="wrapper">
+      </section>
+      <section class="presentation">
         <div class="presentation__text">
           <h2 class="visually-hidden">видеоэкскурсия по городу</h2>
           <b class="presentation__title title">всё ещё сомневаетесь?</b>
           <p class="presentation__desc text">смотрите видеопрезентаию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>
-      </div>
-      <div class="presentation__video">
-        <img src="img/video-mobile@1x.jpg" alt="видеопрезентация по городу седона">
-        <div class="controls">
-          <div class="controls__top-line">
-            <div class="controls__scale">
-              <span class="controls__toggle"></span>
+        <div class="presentation__video">
+          <img src="img/video-mobile@1x.jpg" alt="видеопрезентация по городу седона">
+          <div class="controls presentation__controls">
+            <div class="controls__top-line">
+              <div class="controls__scale">
+                <span class="controls__toggle"></span>
+              </div>
+            </div>
+            <div class="controls__bottom-line">
+              <button class="controls__replay" type="button"></button>
+              <button class="controls__subtitles" type="button"></button>
+              <button class="controls__fullscreen" type="button"></button>
             </div>
           </div>
-          <div class="controls__bottom-line">
-            <button class="controls__replay" type="button"></button>
-            <button class="controls__subtitles" type="button"></button>
-            <button class="controls__fullscreen" type="button"></button>
-          </div>
         </div>
-      </div>
-    </section>
-  </main>
-  <footer class="page-footer">
-    <div class="wrapper page-footer__wrap">
+      </section>
+    </main>
+    <footer class="page-footer">
       <p class="page-footer__signature">#visitsedona</p>
       <div class="page-footer__icon-list social-icon">
         <a class="social-icon__link social-icon__link--twitter" aria-label="твитер" href="#"></a>
@@ -122,7 +110,7 @@
       <p>разработано
         <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="логотип академии"></a>
       </p>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </body>
 </html>

@@ -6,46 +6,44 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="page-body">
-  <header class="page-header">
-    <a href="index.html" class="page-header__logo">
-      <img src="img/logo-sedona-mobile.svg" alt="логотип сайта седона" />
-    </a>
-    <nav class="main-nav">
-      <button type="button" class="main-nav__toggle">
-        <span class="visually-hidden">открыть меню</span>
-      </button>
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item">
-          <a class="site-list__link" href="index.html">главная</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="photo.html">фото и видео</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="#">форма отзыва</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="#">html academy</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main class="page-main">
-    <section class="header-main">
-      <div class="header-main__bg header-main__bg--gallery">
-        <h1 class="visually-hidden">фотогаллерея города седона</h1>
-        <img class="header-main__pic header-main__pic--clip" src="img/text-sedona.svg" alt="седона"/>
-      </div>
-    </section>
-    <div class="wrapper">
+  <div class="page-body__wrap">
+    <header class="page-header">
+      <a href="index.html" class="page-header__logo">
+        <img src="img/logo-sedona-mobile.svg" alt="логотип сайта седона" />
+      </a>
+      <nav class="main-nav">
+        <button type="button" class="main-nav__toggle">
+          <span class="visually-hidden">открыть меню</span>
+        </button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="photo.html">фото и видео</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">html academy</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <section class="header-main">
+        <div class="header-main__bg header-main__bg--gallery">
+          <h1 class="visually-hidden">фотогаллерея города седона</h1>
+          <img class="header-main__pic header-main__pic--clip" src="img/text-sedona.svg" alt="седона"/>
+        </div>
+      </section>
       <section class="intro">
         <h2 class="title intro__main">оставьте свой отзыв</h2>
         <p class="text intro__description">помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримичательностях</p>
       </section>
-    </div>
-    <form class="review" action="https://echo.htmlacademy.ru/courses" method="GET">
-      <div class="review__section">
-        <div class="wrapper">
+      <form class="review" action="https://echo.htmlacademy.ru/courses" method="GET">
+        <div class="review__section">
           <span class="review__title title">представьтесь:</span>
           <div class="review__item">
             <label class="review__label review__label--name text" for="name">имя*:</label>
@@ -60,9 +58,7 @@
             <input class="review__input review__input--desc" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
           </div>
         </div>
-      </div>
-      <div class="review__section">
-        <div class="wrapper">
+        <div class="review__section">
           <span class="review__title title">контактная информация:</span>
           <div class="review__item review__item--contacts">
             <label class="review__label text" for="contact-number">контактный телефон*:</label>
@@ -73,9 +69,7 @@
             <input class="review__input review__input--desc" type="text" name="e-mail" id="e-mail" placeholder="Введите e-mail">
           </div>
         </div>
-      </div>
-      <div class="review__section">
-        <div class="wrapper">
+        <div class="review__section">
           <span class="review__title title">ваше общее впечатление:</span>
           <div class="review__item review__item--radio">
             <input class="review__radio" type="radio" name="effect" id="positive-effect" value="positive" checked>
@@ -90,9 +84,7 @@
             <label class="review__label review__label--radio" for="difficult-effect" >Затрудняюсь ответить</label>
           </div>
         </div>
-      </div>
-      <div class="review__section review__section--sight">
-        <div class="wrapper">
+        <div class="review__section review__section--sight">
           <span class="review__title title">посещенные достопримечательности:</span>
           <div class="review__item review__item--checkbox">
             <input class="review__checkbox"type="checkbox" name="attractions" id="devil-bridge" value="devil-bridge" checked>
@@ -111,18 +103,14 @@
             <label class="review__label review__label--checkbox" for="red-rocks">Красные скалы</label>
           </div>
         </div>
-      </div>
-      <div class="review__section">
-        <div class="wrapper">
+        <div class="review__section">
           <label class="review__title title" for="letter">опишите свои эмоции:</label>
           <textarea id="letter" name="letter" class="review__textarea" placeholder="Опишите подробно все свои восторги"></textarea>
           <button class="review__button button" type="submit">отправить отзыв</button>
         </div>
-      </div>
-    </form>
-  </main>
-  <footer class="page-footer">
-    <div class="wrapper page-footer__wrap">
+      </form>
+    </main>
+    <footer class="page-footer">
       <p class="page-footer__signature">#visitsedona</p>
       <div class="page-footer__icon-list social-icon">
         <a class="social-icon__link social-icon__link--twitter" aria-label="твитер" href="#"></a>
@@ -132,7 +120,7 @@
       <p>разработано
         <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="логотип академии"></a>
       </p>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </body>
 </html>
