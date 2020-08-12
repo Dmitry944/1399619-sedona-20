@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body class="page-body">
   <div class="page-body__wrap">
     <header class="page-header">
       <a href="index.html" class="page-header__logo">
-        <img src="img/logo-sedona-mobile.svg" alt="логотип сайта седона">
+        <img src="img/logo-sedona-mobile.svg" alt="логотип сайта седона" />
       </a>
       <nav class="main-nav">
         <button type="button" class="main-nav__toggle">
@@ -20,7 +20,7 @@
             <a class="site-list__link" href="index.html">главная</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="#">фото и видео</a>
+            <a class="site-list__link" href="photo.html">фото и видео</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="#">форма отзыва</a>
@@ -35,7 +35,7 @@
       <section class="header-main">
         <div class="header-main__bg header-main__bg--gallery">
           <h1 class="visually-hidden">фотогаллерея города седона</h1>
-          <img class="header-main__pic header-main__pic--clip" src="img/text-sedona.svg" alt="седона">
+          <img class="header-main__pic header-main__pic--clip" src="img/text-sedona.svg" alt="седона"/>
         </div>
       </section>
       <section class="intro">
@@ -46,59 +46,59 @@
         <div class="review__section">
           <span class="review__title title">представьтесь:</span>
           <div class="review__item">
-            <label class="review__label text" for="name">имя*:</label>
+            <label class="review__label review__label--name text" for="name">имя*:</label>
             <input class="review__input review__input--desc" type="text" name="name" id="name" placeholder="Петр">
           </div>
           <div class="review__item">
-            <label class="review__label text" for="surname">фамилия*:</label>
+            <label class="review__label review__label--name text" for="surname">фамилия*:</label>
             <input class="review__input review__input--desc" type="text" name="surname" id="surname" placeholder="Иванов">
           </div>
           <div class="review__item">
-            <label class="review__label text" for="patronymic">отчество*:</label>
+            <label class="review__label review__label--name text" for="patronymic">отчество:</label>
             <input class="review__input review__input--desc" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
           </div>
         </div>
         <div class="review__section">
           <span class="review__title title">контактная информация:</span>
-          <div class="review__item">
+          <div class="review__item review__item--contacts">
             <label class="review__label text" for="contact-number">контактный телефон*:</label>
             <input class="review__input review__input--desc" type="text" name="contact-number" id="contact-number" placeholder="Введите телефон">
           </div>
-          <div class="review__item">
+          <div class="review__item review__item--contacts">
             <label class="review__label text" for="e-mail">электронная почта*:</label>
             <input class="review__input review__input--desc" type="text" name="e-mail" id="e-mail" placeholder="Введите e-mail">
           </div>
         </div>
         <div class="review__section">
           <span class="review__title title">ваше общее впечатление:</span>
-          <div class="review__item">
+          <div class="review__item review__item--radio">
             <input class="review__radio" type="radio" name="effect" id="positive-effect" value="positive" checked>
-            <label class="review__label review__label--radio" for="positive-effect">скорее положительные</label>
+            <label class="review__label review__label--radio" for="positive-effect">Скорее положительное</label>
           </div>
-          <div class="review__item">
+          <div class="review__item review__item--radio">
             <input class="review__radio" type="radio" name="effect" id="negativ-effect" value="negativ">
-            <label class="review__label review__label--radio" for="negativ-effect">скорее отрицательные</label>
+            <label class="review__label review__label--radio" for="negativ-effect">Скорее отрицательное</label>
           </div>
-          <div class="review__item">
+          <div class="review__item review__item--radio">
             <input class="review__radio" type="radio" name="effect" id="difficult-effect" value="difficult">
-            <label class="review__label review__label--radio" for="difficult-effect">затрудняюсь ответить</label>
+            <label class="review__label review__label--radio" for="difficult-effect" >Затрудняюсь ответить</label>
           </div>
         </div>
-        <div class="review__section">
+        <div class="review__section review__section--sight">
           <span class="review__title title">посещенные достопримечательности:</span>
-          <div class="review__item">
-            <input class="review__checkbox" type="checkbox" name="attractions" id="devil-bridge" value="devil-bridge" checked>
-            <label class="review__label review__label--checkbox" for="devil-bridge">Мост Дьявола</label>
+          <div class="review__item review__item--checkbox">
+            <input class="review__checkbox"type="checkbox" name="attractions" id="devil-bridge" value="devil-bridge" checked>
+            <label class="review__label review__label--checkbox" for="devil-bridge" >Мост Дьявола</label>
           </div>
-          <div class="review__item">
+          <div class="review__item review__item--checkbox">
             <input class="review__checkbox" type="checkbox" name="attractions" id="mountain-bell" value="mountain-bell" checked>
             <label class="review__label review__label--checkbox" for="mountain-bell">Гора-Колокол</label>
           </div>
-          <div class="review__item">
+          <div class="review__item review__item--checkbox">
             <input class="review__checkbox" type="checkbox" name="attractions" id="slide-park" value="slide-park" checked>
             <label class="review__label review__label--checkbox" for="slide-park">Слайд-парк</label>
           </div>
-          <div class="review__item">
+          <div class="review__item review__item--checkbox">
             <input class="review__checkbox" type="checkbox" name="attractions" id="red-rocks" value="red-rocks">
             <label class="review__label review__label--checkbox" for="red-rocks">Красные скалы</label>
           </div>
@@ -106,16 +106,16 @@
         <div class="review__section">
           <label class="review__title title" for="letter">опишите свои эмоции:</label>
           <textarea id="letter" name="letter" class="review__textarea" placeholder="Опишите подробно все свои восторги"></textarea>
+          <button class="review__button button" type="submit">отправить отзыв</button>
         </div>
-        <button class="review__button button" type="submit">отправить отзыв</button>
       </form>
     </main>
     <footer class="page-footer">
       <p class="page-footer__signature">#visitsedona</p>
       <div class="page-footer__icon-list social-icon">
-        <a class="social-icon__link" aria-label="твитер" href="#"></a>
-        <a class="social-icon__link" aria-label="фейсбук" href="#"></a>
-        <a class="social-icon__link" aria-label="ютуб" href="#"></a>
+        <a class="social-icon__link social-icon__link--twitter" aria-label="твитер" href="#"></a>
+        <a class="social-icon__link social-icon__link--facebook" aria-label="фейсбук" href="#"></a>
+        <a class="social-icon__link social-icon__link--youtube" aria-label="ютуб" href="#"></a>
       </div>
       <p>разработано
         <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="логотип академии"></a>
