@@ -1,58 +1,156 @@
-.edge__wrap {
-  background-color: @basic-bg;
-  text-align: center;
-  padding-right: 12px;
-  padding-left: 13px;
+@media (min-width: @mobile-width) {
+  .edge__wrap {
+    background-color: @basic-bg;
+    text-align: center;
+    padding-right: 12px;
+    padding-left: 13px;
+    min-height: 256px;
 
-  &--silver {
-    background-color: @silver-bg;
+    &--silver {
+      background-color: @silver-bg;
+    }
+  }
+
+  .edge__title {
+    text-align: center;
+    margin: 0;
+    padding-top: 55px;
+  }
+
+  .edge__number {
+    display: block;
+    margin-top: 19px;
+    margin-bottom: 27px;
+    text-align: center;
+
+    &--white {
+      color: @basic-white;
+    }
+  }
+
+  .edge__desc {
+    line-height: 21px;
+    margin: 0;
+    padding-bottom: 39px;
+
+    &--white {
+      color: @basic-white;
+    }
+  }
+
+  .edge__list {
+    .clear-ul;
+  }
+
+  .edge__point {
+    padding-top: 35px;
+    padding-left: 70px;
+
+    &--house {
+      padding-right: 11px;
+    }
+
+    &--souvenirs {
+      padding-right: 21px;
+    }
+
+    &--food {
+      padding-right: 40px;
+    }
   }
 }
 
-.edge__title {
-  text-align: center;
-  margin: 0;
-  padding-top: 55px;
-}
+@media (min-width: @tablet-width) {
+  .edge__item {
+    display: flex;
 
-.edge__number {
-  display: block;
-  margin-top: 19px;
-  margin-bottom: 27px;
-  text-align: center;
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+  }
 
-  &--white {
-    color: @basic-white;
+  .edge__wrap {
+    width: 256px;
+    margin: 0;
+    padding: 0;
+    padding-top: 41px;
+    padding-right: 32px;
+    padding-bottom: 41px;
+    padding-left: 32px;
+    box-sizing: border-box;
+    flex-grow: 0;
+  }
+
+  .edge__photo {
+    background-color: red;
+    flex-grow: 1;
+  }
+
+  .edge__list {
+    display: flex;
+  }
+
+  .edge__point {
+    width: 33.333%; //так смотрится приличнее
+    padding-top: 106px;
+    padding-right: 45px;
+    padding-bottom: 60px;
+    padding-left: 45px;
+    text-align: center;
+
+    &--house {
+      order: 0;
+    }
+
+    &--souvenirs {
+      order: 2;
+    }
+
+    &--food {
+      order: 1;
+    }
+  }
+
+  .edge__title {
+    padding: 0;
+  }
+
+  .edge__desc {
+    margin-top: 30px;
+    padding: 0;
   }
 }
 
-.edge__desc {
-  line-height: 21px;
-  margin: 0;
-  padding-bottom: 39px;
-
-  &--white {
-    color: @basic-white;
-  }
-}
-
-.edge__list {
-  .clear-ul;
-}
-
-.edge__point {
-  padding-top: 35px;
-  padding-left: 70px;
-
-  &--house {
-    padding-right: 11px;
+@media (min-width: @desktop-width) {
+  .edge__wrap {
+    width: 400px;
+    padding-top: 47px;
+    padding-right: 55px;
+    padding-bottom: 56px;
+    padding-left: 55px;
   }
 
-  &--souvenirs {
-    padding-right: 21px;
+  .edge__point {
+    padding-top: 158px;
+    padding-right: 50px;
+    padding-bottom: 80px;
+    padding-left: 50px;
+
+    &--house {
+      order: 0;
+    }
+
+    &--souvenirs {
+      order: 2;
+    }
+
+    &--food {
+      order: 1;
+    }
   }
 
-  &--food {
-    padding-right: 40px;
+  .edge__desc {
+    margin-top: 30px;
+    padding: 0;
   }
 }
