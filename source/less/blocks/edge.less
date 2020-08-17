@@ -1,62 +1,60 @@
-@media (min-width: @mobile-width) {
-  .edge__wrap {
-    background-color: @basic-bg;
-    text-align: center;
-    padding-right: 12px;
-    padding-left: 13px;
-    min-height: 256px;
+.edge__wrap {
+  background-color: @basic-bg;
+  text-align: center;
+  padding-right: 12px;
+  padding-left: 13px;
+  min-height: 256px;
 
-    &--silver {
-      background-color: @silver-bg;
-    }
+  &--silver {
+    background-color: @silver-bg;
+  }
+}
+
+.edge__title {
+  text-align: center;
+  margin: 0;
+  padding-top: 55px;
+}
+
+.edge__number {
+  display: block;
+  margin-top: 19px;
+  margin-bottom: 27px;
+  text-align: center;
+
+  &--white {
+    color: @basic-white;
+  }
+}
+
+.edge__desc {
+  line-height: 21px;
+  margin: 0;
+  padding-bottom: 39px;
+
+  &--white {
+    color: @basic-white;
+  }
+}
+
+.edge__list {
+  .clear-ul;
+}
+
+.edge__point {
+  padding-top: 35px;
+  padding-left: 70px;
+
+  &--house {
+    padding-right: 11px;
   }
 
-  .edge__title {
-    text-align: center;
-    margin: 0;
-    padding-top: 55px;
+  &--souvenirs {
+    padding-right: 21px;
   }
 
-  .edge__number {
-    display: block;
-    margin-top: 19px;
-    margin-bottom: 27px;
-    text-align: center;
-
-    &--white {
-      color: @basic-white;
-    }
-  }
-
-  .edge__desc {
-    line-height: 21px;
-    margin: 0;
-    padding-bottom: 39px;
-
-    &--white {
-      color: @basic-white;
-    }
-  }
-
-  .edge__list {
-    .clear-ul;
-  }
-
-  .edge__point {
-    padding-top: 35px;
-    padding-left: 70px;
-
-    &--house {
-      padding-right: 11px;
-    }
-
-    &--souvenirs {
-      padding-right: 21px;
-    }
-
-    &--food {
-      padding-right: 40px;
-    }
+  &--food {
+    padding-right: 40px;
   }
 }
 
