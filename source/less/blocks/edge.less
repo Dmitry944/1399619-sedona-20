@@ -3,6 +3,7 @@
   text-align: center;
   padding-right: 12px;
   padding-left: 13px;
+  min-height: 256px;
 
   &--silver {
     background-color: @silver-bg;
@@ -54,5 +55,100 @@
 
   &--food {
     padding-right: 40px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .edge__item {
+    display: flex;
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .edge__wrap {
+    width: 256px;
+    margin: 0;
+    padding: 0;
+    padding-top: 41px;
+    padding-right: 32px;
+    padding-bottom: 41px;
+    padding-left: 32px;
+    box-sizing: border-box;
+    flex-grow: 0;
+  }
+
+  .edge__photo {
+    background-color: red;
+    flex-grow: 1;
+  }
+
+  .edge__list {
+    display: flex;
+  }
+
+  .edge__point {
+    width: 33.333%; //так смотрится приличнее
+    padding-top: 106px;
+    padding-right: 45px;
+    padding-bottom: 60px;
+    padding-left: 45px;
+    text-align: center;
+
+    &--house {
+      order: 0;
+    }
+
+    &--souvenirs {
+      order: 2;
+    }
+
+    &--food {
+      order: 1;
+    }
+  }
+
+  .edge__title {
+    padding: 0;
+  }
+
+  .edge__desc {
+    margin-top: 30px;
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .edge__wrap {
+    width: 400px;
+    padding-top: 47px;
+    padding-right: 55px;
+    padding-bottom: 56px;
+    padding-left: 55px;
+  }
+
+  .edge__point {
+    padding-top: 158px;
+    padding-right: 50px;
+    padding-bottom: 80px;
+    padding-left: 50px;
+
+    &--house {
+      order: 0;
+    }
+
+    &--souvenirs {
+      order: 2;
+    }
+
+    &--food {
+      order: 1;
+    }
+  }
+
+  .edge__desc {
+    margin-top: 30px;
+    padding: 0;
   }
 }
