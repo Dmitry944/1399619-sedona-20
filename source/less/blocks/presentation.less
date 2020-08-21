@@ -23,6 +23,31 @@
 
 .presentation__controls {
   position: absolute;
-  bottom: -59px;
+  bottom: -66px;
   left: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .presentation {
+    padding-top: 60px;
+    padding-right: 60px;
+    padding-left: 60px;
+    margin-bottom: 40px;
+    border: none;
+  }
+
+  .presentation__controls {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .presentation {
+    padding-right: 200px;
+    padding-left: 200px;
+    margin-bottom: 85px;
+  }
 }
