@@ -158,3 +158,135 @@
   padding-left: 33px;
   cursor: pointer;
 }
+
+@media (min-width: @tablet-width) {
+  .review {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .review__section {
+    padding: 0;
+    padding-right: 60px;
+    padding-bottom: 60px;
+    padding-left: 60px;
+    border: none;
+
+    &--contacts {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--effects {
+      order: -1;
+    }
+
+    &--sight {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    &--emotion {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .review__label {
+    &--contacts {
+      padding-left: 22px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .review__inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 48px;
+    flex-wrap: wrap;
+
+    &--contacts {
+      width: 100%;
+      flex-direction: column;
+    }
+
+    &--sight {
+      width: 455px;
+    }
+  }
+
+  .review__item--checkbox:last-child {
+    margin-bottom: 54px;
+  }
+
+  .review__textarea {
+    width: auto;
+    margin-top: 55px;
+    padding-top: 18px;
+    min-height: 160px;
+  }
+
+  .review__title {
+    font-size: 21px;
+  }
+
+  .review__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 58px;
+  }
+
+  .review__button {
+    margin: 0;
+    padding-right: 60px;
+    padding-left: 49px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review {
+    padding-bottom: 66px;
+  }
+
+  .review__section {
+    padding-right: 120px;
+    padding-bottom: 60px;
+    padding-left: 120px;
+    border: none;
+  }
+
+  .review__item {
+    &--contacts {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .review__inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 48px;
+    flex-wrap: wrap;
+
+    &--contacts {
+      width: 100%;
+      flex-direction: row;
+    }
+
+    &--sight {
+      width: 100%;
+    }
+  }
+
+  .review__button {
+    padding-right: 133px;
+    padding-left: 132px;
+  }
+}

@@ -31,28 +31,113 @@
 }
 
 .controls__replay {
+  position: absolute;
+  bottom: 24px;
+  left: 25px;
   width: 16px;
   height: 20px;
   border: none;
   color: @black-light;
   opacity: 0.8;
   background-image: url("../img/icon-video-replay.svg");
+  background-color: transparent;
 }
 
 .controls__subtitles {
+  position: absolute;
+  bottom: 24px;
+  right: 74px;
   width: 32px;
   height: 20px;
   border: none;
   color: @black-light;
   opacity: 0.8;
   background-image: url("../img/icon-video-subtitles.svg");
+  background-color: transparent;
 }
 
 .controls__fullscreen {
+  position: absolute;
+  bottom: 24px;
+  right: 23px;
   width: 20px;
   height: 20px;
   border: none;
   color: @black-light;
   opacity: 0.8;
   background-image: url("../img/icon-video-fullscreen.svg");
+  background-color: transparent;
+}
+
+@media (min-width: @tablet-width) {
+  .controls__top-line {
+    height: 93px;
+    width: 100%;
+  }
+
+  .controls__scale {
+    top: 45px;
+    left: 93px;
+    width: 389px;
+  }
+
+  .controls__toggle {
+    position: absolute;
+    top: -3px;
+    left: 204px;
+  }
+
+  .controls__replay {
+    position: absolute;
+    bottom: 37px;
+    left: 35px;
+  }
+
+  .controls__subtitles {
+    position: absolute;
+    bottom: 37px;
+    right: 92px;
+  }
+
+  .controls__fullscreen {
+    position: absolute;
+    bottom: 37px;
+    right: 47px;
+  }
+
+  .controls__bottom-line {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .controls__scale {
+    top: 45px;
+    left: 93px;
+    width: 540px;
+  }
+
+  .controls__toggle {
+    position: absolute;
+    top: -3px;
+    left: 204px;
+  }
+
+  .controls__replay {
+    position: absolute;
+    bottom: 37px;
+    left: 35px;
+  }
+
+  .controls__subtitles {
+    position: absolute;
+    bottom: 37px;
+    right: 92px;
+  }
+
+  .controls__fullscreen {
+    position: absolute;
+    bottom: 37px;
+    right: 47px;
+  }
 }
