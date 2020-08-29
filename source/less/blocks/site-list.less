@@ -1,14 +1,17 @@
 .site-list {
   display: flex;
-  flex-direction: column; //не знаю нужно или нет
+  flex-direction: column;
+
+  &--closed {
+    // display: none;
+  }
+
   .clear-ul;
 }
 
 .site-list__item {
   line-height: 40px;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 5px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(1, 1, 1, 0.2);
   background-color: @basic-bg;
@@ -24,6 +27,10 @@
 
 .site-list__link {
   font-size: 18px;
+  display: block;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 5px;
   font-weight: bold;
   color: @basic-white;
 
@@ -33,6 +40,16 @@
 
   &--last {
     border-bottom: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @hover-bg;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @active-bg;
   }
 }
 
@@ -50,7 +67,18 @@
 
   .site-list__link {
     font-size: 14px;
-    line-height: 26px;
+    line-height: 56px;
+    padding: 0;
     color: @basic-black;
+
+    &:hover,
+    &:focus {
+      color: @basic-bg;
+      background-color: @basic-white;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
   }
 }

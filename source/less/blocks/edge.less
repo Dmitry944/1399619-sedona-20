@@ -3,10 +3,41 @@
   text-align: center;
   padding-right: 12px;
   padding-left: 13px;
-  min-height: 256px;
 
   &--silver {
+    border-bottom: 1px solid @basic-dark-gray;
     background-color: @silver-bg;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.edge__item {
+  position: relative;
+
+  &--silver {
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: @silver-bg;
+  }
+
+  &--point {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  &:first-child::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 37px;
+    top: -6px;
+    left: 0;
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -18,6 +49,7 @@
 
 .edge__number {
   display: block;
+  line-height: 21px;
   margin-top: 19px;
   margin-bottom: 27px;
   text-align: center;
@@ -32,6 +64,11 @@
   margin: 0;
   padding-bottom: 39px;
 
+  &--point {
+    padding: 0;
+    margin-top: 30px;
+  }
+
   &--white {
     color: @basic-white;
   }
@@ -42,19 +79,57 @@
 }
 
 .edge__point {
-  padding-top: 35px;
+  position: relative;
   padding-left: 70px;
+  margin-bottom: 26px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-color: green; // для вида, потом уберу
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   &--house {
     padding-right: 11px;
+
+    &::before {
+      width: 39px;
+      height: 37px;
+      left: 21px;
+    }
   }
 
   &--souvenirs {
     padding-right: 21px;
+
+    &::before {
+      width: 32px;
+      height: 38px;
+      left: 25px;
+    }
   }
 
   &--food {
     padding-right: 40px;
+
+    &::before {
+      width: 40px;
+      height: 35px;
+      left: 18px;
+    }
+  }
+}
+
+.edge__photo {
+  img {
+    display: block;
   }
 }
 
@@ -64,6 +139,14 @@
 
     &--reverse {
       flex-direction: row-reverse;
+    }
+
+    &:first-child::before {
+      display: none;
+    }
+
+    &--point {
+      padding: 0;
     }
   }
 
@@ -89,8 +172,9 @@
   }
 
   .edge__point {
-    width: 33.333%; //так смотрится приличнее
-    padding-top: 106px;
+    width: 33.333%;
+    margin: 0;
+    padding-top: 160px;
     padding-right: 45px;
     padding-bottom: 60px;
     padding-left: 45px;
@@ -98,14 +182,35 @@
 
     &--house {
       order: 0;
+
+      &::before {
+        width: 75px;
+        height: 72px;
+        top: 60px;
+        left: 90px;
+      }
     }
 
     &--souvenirs {
       order: 2;
+
+      &::before {
+        width: 64px;
+        height: 75px;
+        top: 57px;
+        left: 95px;
+      }
     }
 
     &--food {
       order: 1;
+
+      &::before {
+        width: 76px;
+        height: 68px;
+        top: 63px;
+        left: 90px;
+      }
     }
   }
 
@@ -136,14 +241,26 @@
 
     &--house {
       order: 0;
+
+      &::before {
+        left: 160px;
+      }
     }
 
     &--souvenirs {
       order: 2;
+
+      &::before {
+        left: 170px;
+      }
     }
 
     &--food {
       order: 1;
+
+      &::before {
+        left: 160px;
+      }
     }
   }
 

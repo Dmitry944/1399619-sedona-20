@@ -12,14 +12,30 @@
 }
 
 .gallery__button {
+  position: relative;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
   font-weight: bold;
+  margin: 0;
+  padding: 0;
+  padding-left: 37px;
   border: none;
   background-color: @basic-white;
   margin-top: 13px;
-  margin-left: 37px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 21px;
+    top: -3px;
+    left: 0;
+    border: none;
+    background-image: url("../img/icon-like.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .gallery__link {
@@ -28,6 +44,11 @@
 
 .gallery__photo {
   display: block;
+}
+
+.gallery__author {
+  text-transform: none;
+  margin: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -69,7 +90,12 @@
   }
 
   .gallery__button {
+    margin: 0;
     background-color: @gray-light-bg;
+
+    &::before {
+      left: 6px;
+    }
   }
 }
 

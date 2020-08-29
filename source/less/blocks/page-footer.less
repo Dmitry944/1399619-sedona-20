@@ -14,7 +14,23 @@
 }
 
 .page-footer__develop {
+  position: relative;
+  line-height: 24px;
   margin: 0;
+  padding-right: 36px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 34px;
+    top: -5px;
+    right: 0;
+    background-image: url("../img/htmlacademy.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 @media (min-width: @tablet-width) {

@@ -28,6 +28,15 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  &:hover,
+  &:focus {
+    background-color: @hover-bg;
+  }
+
+  &:active {
+    background-color: @active-bg;
+  }
 }
 
 @media (min-width: @tablet-width) {
