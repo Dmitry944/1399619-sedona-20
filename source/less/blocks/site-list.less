@@ -10,7 +10,7 @@
 }
 
 .site-list__item {
-  line-height: 40px;
+  line-height: 39px;
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(1, 1, 1, 0.2);
@@ -55,6 +55,8 @@
 
 @media (min-width: @tablet-width) {
   .site-list {
+    padding-left: 50px;
+    padding-right: 25px;
     flex-direction: row;
     justify-content: start;
   }
@@ -67,7 +69,7 @@
 
   .site-list__link {
     font-size: 14px;
-    line-height: 56px;
+    line-height: 55px;
     padding: 0;
     color: @basic-black;
 
@@ -79,6 +81,27 @@
 
     &:active {
       color: rgba(0, 0, 0, 0.3);
+    }
+
+    &--brown {
+      color: @light-brown;
+
+      &:hover,
+      &:focus {
+        color: @basic-brown;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+
+    &--left {
+      text-align: left;
+    }
+
+    &--right {
+      text-align: right;
     }
   }
 }

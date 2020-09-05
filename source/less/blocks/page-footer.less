@@ -4,6 +4,11 @@
   align-items: center;
   padding-top: 27px;
   padding-bottom: 27px;
+
+  &--index {
+    padding-top: 48px;
+    padding-right: 49px;
+  }
 }
 
 .page-footer__signature {
@@ -22,11 +27,11 @@
   &::after {
     content: "";
     position: absolute;
-    width: 27px;
-    height: 34px;
-    top: -5px;
-    right: 0;
-    background-image: url("../img/htmlacademy.svg");
+    width: 29px;
+    height: 38px;
+    top: -7px;
+    right: -3px;
+    background-image: url("../img/logo-htmlacademy.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -39,5 +44,17 @@
     justify-content: space-around;
     align-items: center;
     padding: 0;
+
+    &--form {
+      padding-top: 3px;
+    }
+  }
+
+  .page-footer__develop {
+    padding-right: 42px;
+
+    &::after {
+      right: 0;
+    }
   }
 }

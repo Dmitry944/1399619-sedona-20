@@ -27,7 +27,7 @@
 
 .header-main__pic {
   width: 282px;
-  padding-top: 90px;
+  padding-top: 88px;
   padding-left: 19px;
 
   &--clip {
@@ -47,6 +47,10 @@
   .header-main__bg {
     height: 518px;
 
+    &--gallery {
+      height: 290px;
+    }
+
     &::after {
       height: 57px;
       background-image: url("../img/bg-intro-triangle-tablet.svg");
@@ -54,10 +58,17 @@
   }
 
   .header-main__pic {
-    width: 460px;
+    width: 461px;
     height: 350px;
     padding-top: 77px;
     padding-left: 153px;
+
+    &--clip {
+      width: 499px;
+      height: 80px;
+      padding-top: 92px;
+      padding-left: 137px;
+    }
   }
 }
 
@@ -65,19 +76,23 @@
   .header-main {
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center bottom;
   }
 
   .header-main__bg {
+    &--gallery {
+      height: 301px;
+    }
+
     &::after {
       background-image: url("../img/bg-intro-triangle-desktop.svg");
     }
   }
 
   .header-main__pic {
-    width: 460px;
-    height: 350px;
-    padding-top: 77px;
-    padding-left: 370px;
+    width: 498px;
+    height: 80px;
+    padding-top: 100px;
+    padding-left: 349px;
   }
 }

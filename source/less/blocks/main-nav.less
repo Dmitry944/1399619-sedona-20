@@ -7,19 +7,50 @@
   background-position: center;
 
   &--closed {
-    width: 23px;
-    height: 22px;
-    right: 20px;
-    bottom: 17px;
-    background-image: url("../img/icon-menu.svg");
+    &::after {
+      content: "";
+      position: absolute;
+      width: 23px;
+      height: 22px;
+      left: 277px;
+      top: 240px;
+      background-image: url("../img/icon-menu.svg");
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &--opened {
-    width: 22px;
-    height: 22px;
-    top: 17px;
-    right: 19px;
-    background-image: url("../img/icon-cross.svg");
+    &::after {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      top: 17px;
+      right: -300px;
+      background-image: url("../img/icon-cross.svg");
+      fill: @basic-white;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 

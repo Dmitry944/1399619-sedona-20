@@ -33,7 +33,7 @@
     position: absolute;
     width: 100%;
     height: 37px;
-    top: -6px;
+    top: -15px;
     left: 0;
     background-image: url("../img/bg-triangle.svg");
     background-repeat: no-repeat;
@@ -44,14 +44,22 @@
 .edge__title {
   text-align: center;
   margin: 0;
-  padding-top: 55px;
+  padding-top: 57px;
+
+  &--second {
+    padding-top: 36px;
+  }
+
+  &--silver {
+    padding-top: 24px;
+  }
 }
 
 .edge__number {
   display: block;
   line-height: 21px;
-  margin-top: 19px;
-  margin-bottom: 27px;
+  margin-top: 11px;
+  margin-bottom: 17px;
   text-align: center;
 
   &--white {
@@ -62,15 +70,19 @@
 .edge__desc {
   line-height: 21px;
   margin: 0;
-  padding-bottom: 39px;
+  padding-bottom: 37px;
 
   &--point {
     padding: 0;
-    margin-top: 30px;
+    margin-top: 17px;
   }
 
   &--white {
     color: @basic-white;
+  }
+
+  &--silver {
+    padding-bottom: 25px;
   }
 }
 
@@ -87,22 +99,19 @@
     margin-bottom: 0;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    background-color: green; // для вида, потом уберу
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
   &--house {
-    padding-right: 11px;
-
     &::before {
-      width: 39px;
+      content: "";
+      position: absolute;
+      width: 27px;
       height: 37px;
       left: 21px;
+      top: -9px;
+      background-image: url("../img/icon-house.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding-right: 11px;
     }
   }
 
@@ -110,9 +119,17 @@
     padding-right: 21px;
 
     &::before {
-      width: 32px;
-      height: 38px;
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 37px;
       left: 25px;
+      top: -11px;
+      background-image: url("../img/icon-gift.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding-right: 11px;
     }
   }
 
@@ -120,9 +137,17 @@
     padding-right: 40px;
 
     &::before {
-      width: 40px;
-      height: 35px;
-      left: 18px;
+      content: "";
+      position: absolute;
+      width: 27px;
+      height: 36px;
+      left: 19px;
+      top: -7px;
+      background-image: url("../img/icon-burger.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding-right: 11px;
     }
   }
 }
@@ -148,18 +173,27 @@
     &--point {
       padding: 0;
     }
+
+    &--silver {
+      padding: 0;
+    }
   }
 
   .edge__wrap {
-    width: 256px;
+    width: 33.333%;
     margin: 0;
     padding: 0;
-    padding-top: 41px;
-    padding-right: 32px;
-    padding-bottom: 41px;
-    padding-left: 32px;
+    padding-top: 42px;
+    padding-right: 33px;
+    padding-bottom: 33px;
+    padding-left: 33px;
     box-sizing: border-box;
     flex-grow: 0;
+
+    &--silver {
+      padding-top: 37px;
+      padding-bottom: 60px;
+    }
   }
 
   .edge__photo {
@@ -174,18 +208,18 @@
   .edge__point {
     width: 33.333%;
     margin: 0;
-    padding-top: 160px;
-    padding-right: 45px;
+    padding-top: 157px;
+    padding-right: 32px;
     padding-bottom: 60px;
-    padding-left: 45px;
+    padding-left: 32px;
     text-align: center;
 
     &--house {
       order: 0;
 
       &::before {
-        width: 75px;
-        height: 72px;
+        width: 65px;
+        height: 70px;
         top: 60px;
         left: 90px;
       }
@@ -195,9 +229,9 @@
       order: 2;
 
       &::before {
-        width: 64px;
-        height: 75px;
-        top: 57px;
+        width: 52px;
+        height: 73px;
+        top: 56px;
         left: 95px;
       }
     }
@@ -206,9 +240,9 @@
       order: 1;
 
       &::before {
-        width: 76px;
-        height: 68px;
-        top: 63px;
+        width: 63px;
+        height: 67px;
+        top: 62px;
         left: 90px;
       }
     }
@@ -219,22 +253,40 @@
   }
 
   .edge__desc {
-    margin-top: 30px;
+    margin-top: 28px;
     padding: 0;
+
+    &--point {
+      margin-top: 22px;
+    }
+  }
+
+  .edge__number {
+    margin-top: 13px;
+    margin-bottom: -5px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .edge__wrap {
     width: 400px;
-    padding-top: 47px;
+    padding-top: 50px;
     padding-right: 55px;
     padding-bottom: 56px;
     padding-left: 55px;
+
+    &--second {
+      padding-top: 53px;
+    }
+
+    &--silver {
+      padding-top: 42px;
+      padding-bottom: 60px;
+    }
   }
 
   .edge__point {
-    padding-top: 158px;
+    padding-top: 160px;
     padding-right: 50px;
     padding-bottom: 80px;
     padding-left: 50px;
@@ -244,6 +296,8 @@
 
       &::before {
         left: 160px;
+        height: 74px;
+        top: 59px;
       }
     }
 
@@ -251,7 +305,9 @@
       order: 2;
 
       &::before {
-        left: 170px;
+        left: 167px;
+        height: 75px;
+        top: 58px;
       }
     }
 
@@ -259,13 +315,23 @@
       order: 1;
 
       &::before {
-        left: 160px;
+        left: 162px;
+        height: 69px;
+        top: 64px;
       }
     }
   }
 
   .edge__desc {
-    margin-top: 30px;
+    margin-top: 27px;
     padding: 0;
+
+    &--point {
+      margin-top: 21px;
+    }
   }
+
+  // .edge__number {
+  //   margin-top: 15px;
+  // }
 }

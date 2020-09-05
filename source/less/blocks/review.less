@@ -7,7 +7,16 @@
   border-top: 1px solid @gray-light;
 
   &--sight {
+    padding-top: 15px;
     padding-bottom: 39px;
+  }
+
+  &--effects {
+    padding-top: 21px;
+  }
+
+  &--emotion {
+    padding-bottom: 50px;
   }
 }
 
@@ -20,6 +29,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    margin-top: 15px;
   }
 
   &--radio {
@@ -27,9 +37,13 @@
     line-height: 26px;
     font-weight: bold;
     text-transform: none;
-    padding-left: 65px;
-    margin-top: 37px;
+    padding-left: 78px;
+    margin-top: 39px;
     margin-bottom: 42px;
+
+    &:last-child {
+      margin-bottom: 17px;
+    }
   }
 
   &--checkbox {
@@ -37,7 +51,7 @@
     line-height: 26px;
     font-weight: bold;
     text-transform: none;
-    padding-left: 65px;
+    padding-left: 79px;
     margin-top: 37px;
     margin-bottom: 54px;
 
@@ -49,7 +63,12 @@
 
 .review__label {
   &--name {
-    margin-right: 13px;
+    margin-right: 15px;
+  }
+
+  &--contacts {
+    padding-left: 22px;
+    margin-bottom: 7px;
   }
 }
 
@@ -85,6 +104,7 @@
 }
 
 .review__input {
+  font-family: "PT Sans", "Arial", sans-serif;
   width: 100%;
   height: 58px;
   line-height: 58px;
@@ -111,6 +131,14 @@
     border: 4px solid @gray-light;
     background-color: @basic-white;
   }
+
+  &--name {
+    padding-top: 5px;
+  }
+
+  &--contacts {
+    padding-top: 7px;
+  }
 }
 
 .review__radio {
@@ -120,7 +148,7 @@
     content: "";
     position: absolute;
     top: -15px;
-    left: -65px;
+    left: -75px;
     width: 21px;
     height: 21px;
     background-color: @black-light;
@@ -136,7 +164,7 @@
       content: "";
       position: absolute;
       top: -15px;
-      left: -65px;
+      left: -75px;
       width: 51px;
       height: 51px;
       background-color: @gray-light-bg;
@@ -144,28 +172,28 @@
     }
   }
 
-  &:hover + label,
-  &:focus + label {
+  & + label:hover,
+  & + label:focus {
     &::before {
       background-color: @gray-light;
     }
   }
 
-  &:active + label {
+  & + label:active {
     &::before {
       background-color: @dark-gray;
     }
   }
 
-  &:checked:hover + label,
-  &:checked:focus + label {
+  &:checked + label:hover,
+  &:checked + label:focus {
     &::before {
       background-color: @black-light;
       border: 15px solid @gray-light;
     }
   }
 
-  &:checked:active + label {
+  &:checked + label:active {
     &::before {
       background-color: rgba(0, 0, 0, 0.3);
       border: 15px solid @dark-gray;
@@ -176,52 +204,60 @@
 .review__checkbox {
   display: none;
 
-  &:checked + label::before {
-    background-image: url("../img/tick.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  &:checked + label::after {
+    display: block;
   }
 
   & + label {
     position: relative;
     cursor: pointer;
 
+    &::after {
+      content: "";
+      position: absolute;
+      width: 23px;
+      height: 16px;
+      top: 3px;
+      left: -63px;
+      background-image: url("../img/tick.svg");
+      display: none;
+    }
+
     &::before {
       content: "";
       position: absolute;
       top: -15px;
-      left: -65px;
-      width: 51px;
-      height: 51px;
+      left: -80px;
+      width: 55px;
+      height: 55px;
       background-color: @gray-light-bg;
       border-radius: 5px;
     }
   }
 
-  &:hover + label,
-  &:focus + label {
+  & + label:hover,
+  & + label:focus {
     &::before {
       background-color: @gray-light;
     }
   }
 
-  &:active + label {
+  & + label:active {
     &::before {
       background-color: @dark-gray;
     }
   }
 
-  &:checked:hover + label,
-  &:checked:focus + label {
+  &:checked + label:hover,
+  &:checked + label:focus {
     &::before {
       background-color: @gray-light;
     }
   }
 
-  &:checked:active + label {
-    &::before {
-      background-image: url("../img/icon-tick — opacity.svg");
-      background-color: @dark-gray;
+  &:checked + label:active {
+    &::after {
+      opacity: 0.3;
     }
   }
 }
@@ -234,8 +270,9 @@
 }
 
 .review__textarea {
+  font-family: "PT Sans", "Arial", sans-serif;
   width: 280px;
-  min-height: 118px;
+  min-height: 160px;
   margin-top: 15px;
   padding-top: 13px;
   padding-left: 21px;
@@ -252,11 +289,12 @@
 }
 
 .review__button {
-  margin-top: 51px;
-  padding-top: 18px;
-  padding-right: 33px;
+  font-family: inherit;
+  margin-top: 44px;
+  padding-top: 16px;
+  padding-right: 49px;
   padding-bottom: 14px;
-  padding-left: 33px;
+  padding-left: 47px;
   cursor: pointer;
 }
 
@@ -276,6 +314,7 @@
     &--name {
       position: relative;
       padding-bottom: 72px;
+      padding-left: 59px;
 
       &::before {
         position: absolute;
@@ -298,6 +337,7 @@
 
     &--effects {
       padding-right: 30px;
+      padding-left: 59px;
       order: -1;
     }
 
@@ -318,7 +358,7 @@
   .review__label {
     &--contacts {
       padding-left: 22px;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
     }
   }
 
@@ -334,7 +374,7 @@
     }
 
     &--sight {
-      width: 455px;
+      width: 466px;
     }
   }
 
@@ -347,6 +387,17 @@
     &--checkbox {
       margin: 0;
       margin-top: 60px;
+      margin-left: 5px;
+      width: 201px;
+      box-sizing: border-box;
+    }
+
+    &--contacts {
+      margin-top: 23px;
+    }
+
+    &--mail {
+      margin-top: 30px;
     }
   }
 
@@ -393,6 +444,7 @@
 
     &--effects {
       margin-bottom: 72px;
+      text-align: left;
     }
   }
 
@@ -405,8 +457,8 @@
 
   .review__button {
     margin: 0;
-    padding-right: 60px;
-    padding-left: 49px;
+    padding-right: 77px;
+    padding-left: 65px;
   }
 }
 
@@ -423,14 +475,23 @@
 
     &--name {
       padding-left: 80px;
+      padding-bottom: 68px;
     }
 
     &--effects {
       padding-left: 200px;
     }
 
+    &--contacts {
+      padding-bottom: 51px;
+    }
+
     &--sight {
       padding-bottom: 80px;
+    }
+
+    &--emotion {
+      padding-bottom: 0;
     }
   }
 
@@ -458,10 +519,20 @@
     &--contacts {
       flex-direction: row;
       align-items: center;
+      margin-top: 26px;
     }
 
     &--radio {
       padding-left: 0;
+    }
+
+    &--checkbox {
+      margin-left: 2px;
+      width: 203px;
+    }
+
+    &--mail {
+      margin-top: 24px;
     }
   }
 
@@ -479,6 +550,7 @@
 
     &--sight {
       width: 100%;
+      margin-top: 0;
     }
   }
 
@@ -487,6 +559,10 @@
       margin: 0;
       margin-right: 16px;
       padding: 0;
+    }
+
+    &--mail {
+      margin-right: 20px;
     }
   }
 
@@ -500,8 +576,12 @@
     }
   }
 
+  .review__info {
+    margin-top: 60px;
+  }
+
   .review__button {
-    padding-right: 133px;
-    padding-left: 132px;
+    padding-right: 147px;
+    padding-left: 150px;
   }
 }

@@ -8,7 +8,8 @@
 
 .gallery__title {
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 9px;
+  margin-bottom: 0;
 }
 
 .gallery__button {
@@ -69,20 +70,42 @@
     }
   }
 
+  .gallery__photo {
+    width: 324px;
+    height: 267px;
+
+    &--first {
+      height: 400px;
+    }
+  }
+
   .gallery__caption {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 22px;
+    padding-top: 20px;
     padding-right: 20px;
-    padding-bottom: 15px;
+    padding-bottom: 16px;
     padding-left: 20px;
     background-color: @gray-light-bg;
+
+    &--flora {
+      padding-right: 29px;
+    }
+
+    &--road {
+      padding-right: 36px;
+    }
+
+    &--bridge {
+      padding-right: 29px;
+    }
   }
 
   .gallery__title {
     width: 100%;
     line-height: 24px;
     margin: 0;
+    margin-top: -5px;
   }
 
   .gallery__author {
