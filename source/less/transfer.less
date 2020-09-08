@@ -1,0 +1,21 @@
+.transfer {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .transfer {
+    display: block;
+
+    &--change {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .transfer {
+    &--change {
+      display: block;
+    }
+  }
+}

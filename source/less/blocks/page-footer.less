@@ -3,7 +3,13 @@
   flex-direction: column;
   align-items: center;
   padding-top: 27px;
+  padding-right: 3px;
   padding-bottom: 27px;
+
+  &--index {
+    padding-top: 55px;
+    padding-right: 49px;
+  }
 }
 
 .page-footer__signature {
@@ -14,14 +20,51 @@
 }
 
 .page-footer__develop {
+  position: relative;
+  line-height: 24px;
   margin: 0;
+  padding-right: 36px;
+  color: @basic-black;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 29px;
+    height: 38px;
+    top: -7px;
+    right: -3px;
+    background-image: url("../img/logo-htmlacademy.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .page-footer {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 0;
+    padding-left: 60px;
+    padding-right: 57px;
+
+    &--form {
+      padding-top: 3px;
+    }
+  }
+
+  .page-footer__develop {
+    padding-right: 42px;
+
+    &::after {
+      right: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    padding: 0 118px;
   }
 }

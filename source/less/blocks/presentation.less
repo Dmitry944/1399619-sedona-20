@@ -11,9 +11,9 @@
 }
 
 .presentation__desc {
-  line-height: 26px;
+  line-height: 24px;
   margin: 0;
-  margin-top: 35px;
+  margin-top: 28px;
   margin-bottom: 35px;
 }
 
@@ -33,11 +33,24 @@
 
 @media (min-width: @tablet-width) {
   .presentation {
-    padding-top: 60px;
+    padding-top: 58px;
     padding-right: 60px;
     padding-left: 60px;
-    margin-bottom: 40px;
+    margin-bottom: 43px;
     border: none;
+  }
+
+  .presentation__title {
+    font-size: 30px;
+  }
+
+  .presentation__text {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+
+  .presentation__video {
+    height: 500px;
   }
 
   .presentation__controls {
@@ -46,10 +59,15 @@
     bottom: 0;
     width: 100%;
   }
+
+  .presentation__desc {
+    margin-bottom: 79px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .presentation {
+    padding-top: 60px;
     padding-right: 200px;
     padding-left: 200px;
     margin-bottom: 85px;

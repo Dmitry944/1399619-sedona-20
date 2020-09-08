@@ -7,7 +7,16 @@
   border-top: 1px solid @gray-light;
 
   &--sight {
+    padding-top: 15px;
     padding-bottom: 39px;
+  }
+
+  &--effects {
+    padding-top: 21px;
+  }
+
+  &--emotion {
+    padding-bottom: 50px;
   }
 }
 
@@ -20,6 +29,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
+    margin-top: 15px;
   }
 
   &--radio {
@@ -27,9 +37,13 @@
     line-height: 26px;
     font-weight: bold;
     text-transform: none;
-    padding-left: 65px;
-    margin-top: 37px;
+    padding-left: 78px;
+    margin-top: 39px;
     margin-bottom: 42px;
+
+    &:last-child {
+      margin-bottom: 17px;
+    }
   }
 
   &--checkbox {
@@ -37,7 +51,7 @@
     line-height: 26px;
     font-weight: bold;
     text-transform: none;
-    padding-left: 65px;
+    padding-left: 79px;
     margin-top: 37px;
     margin-bottom: 54px;
 
@@ -49,28 +63,74 @@
 
 .review__label {
   &--name {
-    margin-right: 13px;
+    margin-right: 15px;
+  }
+
+  &--contacts {
+    padding-left: 22px;
+    margin-bottom: 7px;
+  }
+}
+
+.review__wrap {
+  width: 100%;
+  position: relative;
+
+  &--phone::after {
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    top: 0;
+    right: 0;
+    background-color: @basic-gray;
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--mail::after {
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    top: 0;
+    right: 0;
+    background-color: @basic-gray;
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
 .review__input {
   width: 100%;
-  line-height: 58px;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 22px;
+  padding: 14px 17px;
   background-color: @gray-light-bg;
-  border: none;
+  box-sizing: border-box;
+  border: 4px solid transparent;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: @basic-black;
 
-  &--desc {
-    box-sizing: border-box;
+  &::placeholder {
+    color: @basic-black;
   }
 
-  &--desc::placeholder {
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: bold;
-    color: @basic-black;
+  &:hover,
+  &:focus {
+    background-color: @gray-light;
+  }
+
+  &:active {
+    border-color: @gray-light;
+    background-color: @basic-white;
+  }
+
+  &--contacts {
+    padding-top: 15px;
+    padding-bottom: 11px;
   }
 }
 
@@ -81,10 +141,10 @@
     content: "";
     position: absolute;
     top: -15px;
-    left: -65px;
+    left: -75px;
     width: 21px;
     height: 21px;
-    background-color: @basic-black;
+    background-color: @black-light;
     border: 15px solid @gray-light-bg;
     border-radius: 25px;
   }
@@ -97,11 +157,39 @@
       content: "";
       position: absolute;
       top: -15px;
-      left: -65px;
+      left: -75px;
       width: 51px;
       height: 51px;
       background-color: @gray-light-bg;
       border-radius: 25px;
+    }
+  }
+
+  & + label:hover,
+  & + label:focus {
+    &::before {
+      background-color: @gray-light;
+    }
+  }
+
+  & + label:active {
+    &::before {
+      background-color: @dark-gray;
+    }
+  }
+
+  &:checked + label:hover,
+  &:checked + label:focus {
+    &::before {
+      background-color: @black-light;
+      border: 15px solid @gray-light;
+    }
+  }
+
+  &:checked + label:active {
+    &::before {
+      background-color: rgba(0, 0, 0, 0.3);
+      border: 15px solid @dark-gray;
     }
   }
 }
@@ -109,38 +197,82 @@
 .review__checkbox {
   display: none;
 
-  &:checked + label::before {
-    background-image: url("../img/tick.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  &:checked + label::after {
+    display: block;
   }
 
   & + label {
     position: relative;
     cursor: pointer;
 
+    &::after {
+      content: "";
+      position: absolute;
+      width: 23px;
+      height: 16px;
+      top: 3px;
+      left: -63px;
+      background-image: url("../img/tick.svg");
+      display: none;
+    }
+
     &::before {
       content: "";
       position: absolute;
       top: -15px;
-      left: -65px;
-      width: 51px;
-      height: 51px;
+      left: -80px;
+      width: 55px;
+      height: 55px;
       background-color: @gray-light-bg;
       border-radius: 5px;
     }
   }
+
+  & + label:hover,
+  & + label:focus {
+    &::before {
+      background-color: @gray-light;
+    }
+  }
+
+  & + label:active {
+    &::before {
+      background-color: @dark-gray;
+    }
+  }
+
+  &:checked + label:hover,
+  &:checked + label:focus {
+    &::before {
+      background-color: @gray-light;
+    }
+  }
+
+  &:checked + label:active {
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+
+.review__title--strip {
+  text-align: center;
+  width: 280px;
+  display: block;
+  margin: 0 auto;
 }
 
 .review__textarea {
+  font-family: "PT Sans", "Arial", sans-serif;
   width: 280px;
-  min-height: 118px;
+  min-height: 160px;
   margin-top: 15px;
   padding-top: 13px;
   padding-left: 21px;
   background-color: @gray-light-bg;
   border: none;
   box-sizing: border-box;
+  resize: none;
 
   &::placeholder {
     font-size: 18px;
@@ -151,11 +283,12 @@
 }
 
 .review__button {
-  margin-top: 51px;
-  padding-top: 18px;
-  padding-right: 33px;
+  font-family: inherit;
+  margin-top: 44px;
+  padding-top: 16px;
+  padding-right: 49px;
   padding-bottom: 14px;
-  padding-left: 33px;
+  padding-left: 47px;
   cursor: pointer;
 }
 
@@ -172,20 +305,40 @@
     padding-left: 60px;
     border: none;
 
+    &--name {
+      position: relative;
+      padding-bottom: 69px;
+      padding-left: 59px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 292px;
+        top: 0;
+        left: 0;
+        background-color: @beige;
+      }
+    }
+
     &--contacts {
       grid-column-start: 1;
       grid-column-end: 3;
       display: flex;
       flex-direction: column;
+      padding-bottom: 52px;
     }
 
     &--effects {
+      padding-right: 30px;
+      padding-left: 59px;
       order: -1;
     }
 
     &--sight {
       grid-column-start: 1;
       grid-column-end: 3;
+      padding-bottom: 85px;
     }
 
     &--emotion {
@@ -199,7 +352,7 @@
   .review__label {
     &--contacts {
       padding-left: 22px;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
     }
   }
 
@@ -207,7 +360,6 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    margin-top: 48px;
     flex-wrap: wrap;
 
     &--contacts {
@@ -216,12 +368,31 @@
     }
 
     &--sight {
-      width: 455px;
+      width: 466px;
     }
   }
 
-  .review__item--checkbox:last-child {
-    margin-bottom: 54px;
+  .review__item {
+    &--radio {
+      margin: 0;
+      margin-top: 52px;
+    }
+
+    &--checkbox {
+      margin: 0;
+      margin-top: 60px;
+      margin-left: 5px;
+      width: 201px;
+      box-sizing: border-box;
+    }
+
+    &--contacts {
+      margin-top: 23px;
+    }
+
+    &--mail {
+      margin-top: 30px;
+    }
   }
 
   .review__textarea {
@@ -232,20 +403,56 @@
   }
 
   .review__title {
+    display: block;
     font-size: 21px;
+
+    &--strip {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 123px;
+        height: 1px;
+        top: 50%;
+        left: -185px;
+        background-color: @beige;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 123px;
+        height: 1px;
+        top: 50%;
+        right: -185px;
+        background-color: @beige;
+      }
+    }
+
+    &--name {
+      display: block;
+      margin-bottom: 55px;
+      text-align: left;
+    }
+
+    &--effects {
+      margin-bottom: 72px;
+      text-align: left;
+    }
   }
 
   .review__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 58px;
+    margin-top: 60px;
   }
 
   .review__button {
     margin: 0;
-    padding-right: 60px;
-    padding-left: 49px;
+    padding-right: 77px;
+    padding-left: 65px;
   }
 }
 
@@ -259,12 +466,75 @@
     padding-bottom: 60px;
     padding-left: 120px;
     border: none;
+
+    &--name {
+      padding-left: 80px;
+      padding-bottom: 66px;
+    }
+
+    &--effects {
+      padding-left: 200px;
+    }
+
+    &--contacts {
+      padding-bottom: 51px;
+    }
+
+    &--sight {
+      padding-bottom: 80px;
+    }
+
+    &--emotion {
+      padding-bottom: 0;
+    }
+  }
+
+  .review__title {
+    &--strip::after {
+      width: 280px;
+      right: -340px;
+    }
+
+    &--strip::before {
+      width: 280px;
+      left: -340px;
+    }
+
+    &--effects {
+      text-align: left;
+    }
+  }
+
+  .review__contacts-phone {
+    display: none;
   }
 
   .review__item {
     &--contacts {
       flex-direction: row;
       align-items: center;
+      margin-top: 26px;
+    }
+
+    &--radio {
+      padding-left: 0;
+    }
+
+    &--checkbox {
+      margin-left: 2px;
+      width: 203px;
+
+      &:nth-child(2) {
+        margin-left: 22px;
+      }
+
+      &:nth-child(3) {
+        margin-left: 21px;
+      }
+    }
+
+    &--mail {
+      margin-top: 24px;
     }
   }
 
@@ -282,11 +552,38 @@
 
     &--sight {
       width: 100%;
+      margin-top: 0;
     }
   }
 
+  .review__label {
+    &--contacts {
+      margin: 0;
+      margin-right: 16px;
+      padding: 0;
+    }
+
+    &--mail {
+      margin-right: 20px;
+    }
+  }
+
+  .review__wrap {
+    width: 315px;
+  }
+
+  .review__input {
+    &--contacts {
+      padding-right: 58px;
+    }
+  }
+
+  .review__info {
+    margin-top: 60px;
+  }
+
   .review__button {
-    padding-right: 133px;
-    padding-left: 132px;
+    padding-right: 147px;
+    padding-left: 150px;
   }
 }

@@ -8,18 +8,35 @@
 
 .gallery__title {
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 9px;
+  margin-bottom: 0;
 }
 
 .gallery__button {
+  position: relative;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
   font-weight: bold;
+  margin: 0;
+  padding: 0;
+  padding-left: 37px;
   border: none;
   background-color: @basic-white;
   margin-top: 13px;
-  margin-left: 37px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 21px;
+    top: -3px;
+    left: 0;
+    border: none;
+    background-image: url("../img/icon-like.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .gallery__link {
@@ -28,6 +45,11 @@
 
 .gallery__photo {
   display: block;
+}
+
+.gallery__author {
+  text-transform: none;
+  margin: 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -48,20 +70,42 @@
     }
   }
 
+  .gallery__photo {
+    width: 324px;
+    height: 267px;
+
+    &--first {
+      height: 400px;
+    }
+  }
+
   .gallery__caption {
     display: flex;
     flex-wrap: wrap;
-    padding-top: 22px;
+    padding-top: 20px;
     padding-right: 20px;
-    padding-bottom: 15px;
+    padding-bottom: 16px;
     padding-left: 20px;
     background-color: @gray-light-bg;
+
+    &--flora {
+      padding-right: 29px;
+    }
+
+    &--road {
+      padding-right: 36px;
+    }
+
+    &--bridge {
+      padding-right: 29px;
+    }
   }
 
   .gallery__title {
     width: 100%;
     line-height: 24px;
     margin: 0;
+    margin-top: -5px;
   }
 
   .gallery__author {
@@ -69,7 +113,12 @@
   }
 
   .gallery__button {
+    margin: 0;
     background-color: @gray-light-bg;
+
+    &::before {
+      left: 6px;
+    }
   }
 }
 

@@ -3,23 +3,63 @@
   text-align: center;
   padding-right: 12px;
   padding-left: 13px;
-  min-height: 256px;
 
   &--silver {
+    border-bottom: 1px solid @basic-dark-gray;
     background-color: @silver-bg;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.edge__item {
+  position: relative;
+
+  &--silver {
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: @silver-bg;
+  }
+
+  &--point {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  &:first-child::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 37px;
+    top: -15px;
+    left: 0;
+    background-image: url("../img/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
 .edge__title {
   text-align: center;
   margin: 0;
-  padding-top: 55px;
+  padding-top: 57px;
+
+  &--second {
+    padding-top: 36px;
+  }
+
+  &--silver {
+    padding-top: 24px;
+  }
 }
 
 .edge__number {
   display: block;
-  margin-top: 19px;
-  margin-bottom: 27px;
+  line-height: 21px;
+  margin-top: 11px;
+  margin-bottom: 17px;
   text-align: center;
 
   &--white {
@@ -30,10 +70,19 @@
 .edge__desc {
   line-height: 21px;
   margin: 0;
-  padding-bottom: 39px;
+  padding-bottom: 37px;
+
+  &--point {
+    padding: 0;
+    margin-top: 17px;
+  }
 
   &--white {
     color: @basic-white;
+  }
+
+  &--silver {
+    padding-bottom: 25px;
   }
 }
 
@@ -42,19 +91,70 @@
 }
 
 .edge__point {
-  padding-top: 35px;
+  position: relative;
   padding-left: 70px;
+  margin-bottom: 26px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &--house {
-    padding-right: 11px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 27px;
+      height: 37px;
+      left: 21px;
+      top: -9px;
+      background-image: url("../img/icon-house.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding-right: 11px;
+    }
   }
 
   &--souvenirs {
     padding-right: 21px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 37px;
+      left: 25px;
+      top: -11px;
+      background-image: url("../img/icon-gift.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding-right: 11px;
+    }
   }
 
   &--food {
     padding-right: 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 27px;
+      height: 36px;
+      left: 19px;
+      top: -7px;
+      background-image: url("../img/icon-burger.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding-right: 11px;
+    }
+  }
+}
+
+.edge__photo {
+  img {
+    display: block;
   }
 }
 
@@ -65,18 +165,41 @@
     &--reverse {
       flex-direction: row-reverse;
     }
+
+    &:first-child::before {
+      display: none;
+    }
+
+    &--point {
+      padding: 0;
+    }
+
+    &--silver {
+      padding: 0;
+    }
   }
 
   .edge__wrap {
-    width: 256px;
+    width: 33.333%;
     margin: 0;
     padding: 0;
-    padding-top: 41px;
-    padding-right: 32px;
-    padding-bottom: 41px;
-    padding-left: 32px;
+    padding-top: 42px;
+    padding-right: 33px;
+    padding-bottom: 45px;
+    padding-left: 33px;
     box-sizing: border-box;
     flex-grow: 0;
+
+    &--second {
+      padding-bottom: 41px;
+    }
+
+    &--silver {
+      padding-top: 43px;
+      padding-right: 40px;
+      padding-bottom: 38px;
+      padding-left: 40px;
+    }
   }
 
   .edge__photo {
@@ -89,23 +212,45 @@
   }
 
   .edge__point {
-    width: 33.333%; //так смотрится приличнее
-    padding-top: 106px;
-    padding-right: 45px;
+    width: 33.333%;
+    margin: 0;
+    padding-top: 157px;
+    padding-right: 32px;
     padding-bottom: 60px;
-    padding-left: 45px;
+    padding-left: 32px;
     text-align: center;
 
     &--house {
       order: 0;
+
+      &::before {
+        width: 65px;
+        height: 70px;
+        top: 60px;
+        left: 90px;
+      }
     }
 
     &--souvenirs {
       order: 2;
+
+      &::before {
+        width: 52px;
+        height: 73px;
+        top: 56px;
+        left: 95px;
+      }
     }
 
     &--food {
       order: 1;
+
+      &::before {
+        width: 63px;
+        height: 67px;
+        top: 62px;
+        left: 90px;
+      }
     }
   }
 
@@ -114,41 +259,84 @@
   }
 
   .edge__desc {
-    margin-top: 30px;
+    margin-top: 28px;
     padding: 0;
+
+    &--point {
+      margin-top: 22px;
+    }
+  }
+
+  .edge__number {
+    margin-top: 13px;
+    margin-bottom: -5px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .edge__wrap {
     width: 400px;
-    padding-top: 47px;
+    padding-top: 50px;
     padding-right: 55px;
     padding-bottom: 56px;
     padding-left: 55px;
+
+    &--second {
+      padding-top: 53px;
+      padding-right: 85px;
+      padding-bottom: 54px;
+      padding-left: 84px;
+    }
+
+    &--silver {
+      padding-top: 42px;
+      padding-bottom: 60px;
+    }
   }
 
   .edge__point {
-    padding-top: 158px;
+    padding-top: 160px;
     padding-right: 50px;
     padding-bottom: 80px;
     padding-left: 50px;
 
     &--house {
       order: 0;
+
+      &::before {
+        left: 160px;
+        height: 74px;
+        top: 59px;
+      }
     }
 
     &--souvenirs {
       order: 2;
+
+      &::before {
+        left: 167px;
+        height: 75px;
+        top: 58px;
+      }
     }
 
     &--food {
       order: 1;
+
+      &::before {
+        left: 162px;
+        height: 69px;
+        top: 64px;
+      }
     }
   }
 
   .edge__desc {
-    margin-top: 30px;
+    margin-top: 27px;
     padding: 0;
+
+    &--point {
+      margin-top: 21px;
+    }
   }
 }

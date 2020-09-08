@@ -12,21 +12,21 @@
         <img src="img/logo-sedona-mobile.svg" alt="логотип сайта седона">
       </a>
       <nav class="main-nav">
-        <button type="button" class="main-nav__toggle">
+        <button type="button" class="main-nav__toggle main-nav__toggle--closed">
           <span class="visually-hidden">открыть меню</span>
         </button>
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list site-list site-list--closed">
           <li class="site-list__item">
-            <a class="site-list__link site-list__link--first" href="index.html">главная</a>
+            <a class="site-list__link site-list__link--left site-list__link--first" href="index.html">главная</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="photo.html">фото и видео</a>
+            <a class="site-list__link site-list__link--left" href="photo.html">фото и видео</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="#">форма отзыва</a>
+            <a class="site-list__link site-list__link--right site-list__link--brown" href="#">форма отзыва</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link site-list__link--last" href="#">html academy</a>
+            <a class="site-list__link site-list__link--right site-list__link--last" href="#">html academy</a>
           </li>
         </ul>
       </nav>
@@ -38,41 +38,45 @@
           <img class="header-main__pic header-main__pic--clip" src="img/text-sedona.svg" alt="седона"/>
         </div>
       </section>
-      <section class="intro">
-        <h2 class="title intro__main">оставьте свой отзыв</h2>
-        <p class="text intro__description">помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримичательностях</p>
+      <section class="intro intro--form">
+        <h2 class="title intro__main intro__main--form">оставьте свой отзыв</h2>
+        <p class="text intro__description">помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </section>
       <form class="review" action="https://echo.htmlacademy.ru/courses" method="GET">
-        <div class="review__section">
-          <span class="review__title title">представьтесь:</span>
+        <div class="review__section review__section--name">
+          <span class="review__title review__title--name title">представьтесь:</span>
           <div class="review__item">
             <label class="review__label review__label--name text" for="name">имя*:</label>
-            <input class="review__input review__input--desc" type="text" name="name" id="name" placeholder="Петр">
+            <input class="review__input" type="text" name="name" id="name" placeholder="Петр">
           </div>
           <div class="review__item">
             <label class="review__label review__label--name text" for="surname">фамилия*:</label>
-            <input class="review__input review__input--desc" type="text" name="surname" id="surname" placeholder="Иванов">
+            <input class="review__input" type="text" name="surname" id="surname" placeholder="Иванов">
           </div>
           <div class="review__item">
             <label class="review__label review__label--name text" for="patronymic">отчество:</label>
-            <input class="review__input review__input--desc" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
+            <input class="review__input" type="text" name="patronymic" id="patronymic" placeholder="Александрович">
           </div>
         </div>
         <div class="review__section review__section--contacts">
-          <span class="review__title title">контактная информация:</span>
+          <span class="review__title review__title--strip title">контактная информация:</span>
           <div class="review__inner review__inner--contacts">
             <div class="review__item review__item--contacts">
-              <label class="review__label review__label--contacts text" for="contact-number">контактный телефон*:</label>
-              <input class="review__input review__input--desc" type="text" name="contact-number" id="contact-number" placeholder="Введите телефон">
+              <label class="review__label review__label--contacts text" for="contact-number"><span class="review__contacts-phone">контактный</span> телефон*:</label>
+              <div class="review__wrap review__wrap--phone">
+                <input class="review__input review__input--contacts " type="text" name="contact-number" id="contact-number" placeholder="Введите телефон">
+              </div>
             </div>
-            <div class="review__item review__item--contacts">
-              <label class="review__label review__label--contacts text" for="e-mail">электронная почта*:</label>
-              <input class="review__input review__input--desc" type="text" name="e-mail" id="e-mail" placeholder="Введите e-mail">
+            <div class="review__item review__item--contacts review__item--mail">
+              <label class="review__label review__label--contacts review__label--mail text" for="e-mail">электронная почта*:</label>
+              <div class="review__wrap review__wrap--mail">
+                <input class="review__input review__input--contacts" type="text" name="e-mail" id="e-mail" placeholder="Введите e-mail">
+              </div>
             </div>
           </div>
         </div>
         <div class="review__section review__section--effects">
-          <span class="review__title title">ваше общее впечатление:</span>
+          <span class="review__title review__title--effects title">ваше общее впечатление:</span>
           <div class="review__item review__item--radio">
             <input class="review__radio" type="radio" name="effect" id="positive-effect" value="positive" checked>
             <label class="review__label review__label--radio" for="positive-effect">Скорее положительное</label>
@@ -87,7 +91,7 @@
           </div>
         </div>
         <div class="review__section review__section--sight">
-          <span class="review__title title">посещенные достопримечательности:</span>
+          <span class="review__title review__title--strip title">посещенные достопримечательности:</span>
           <div class="review__inner review__inner--sight">
             <div class="review__item review__item--checkbox">
               <input class="review__checkbox"type="checkbox" name="attractions" id="devil-bridge" value="devil-bridge" checked>
@@ -108,7 +112,7 @@
           </div>
         </div>
         <div class="review__section review__section--emotion">
-          <label class="review__title title" for="letter">опишите свои эмоции:</label>
+          <label class="review__title review__title--strip title" for="letter">опишите свои эмоции:</label>
           <textarea id="letter" name="letter" class="review__textarea" placeholder="Опишите подробно все свои восторги"></textarea>
           <div class="review__info">
             <button class="review__button button" type="submit">отправить отзыв</button>
@@ -117,14 +121,14 @@
         </div>
       </form>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer page-footer--form">
       <p class="page-footer__signature">#visitsedona</p>
       <div class="page-footer__icon-list social-icon">
         <a class="social-icon__link social-icon__link--twitter" aria-label="твитер" href="#"></a>
         <a class="social-icon__link social-icon__link--facebook" aria-label="фейсбук" href="#"></a>
         <a class="social-icon__link social-icon__link--youtube" aria-label="ютуб" href="#"></a>
       </div>
-      <p>разработано
+      <p class="page-footer__develop">разработано
         <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="логотип академии"></a>
       </p>
     </footer>

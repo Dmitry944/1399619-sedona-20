@@ -12,21 +12,21 @@
         <img src="img/logo-sedona-mobile.svg" alt="логотип сайта седона">
       </a>
       <nav class="main-nav">
-        <button type="button" class="main-nav__toggle">
+        <button type="button" class="main-nav__toggle main-nav__toggle--opened">
           <span class="visually-hidden">открыть меню</span>
         </button>
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list site-list site-list--closed">
           <li class="site-list__item">
-            <a class="site-list__link site-list__link--first" href="#">главная</a>
+            <a class="site-list__link site-list__link--first site-list__link--left site-list__link--brown" href="#">главная</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="photo.html">фото и видео</a>
+            <a class="site-list__link site-list__link--left" href="photo.html">фото и видео</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="form.html">форма отзыва</a>
+            <a class="site-list__link site-list__link--right" href="form.html">форма отзыва</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link site-list__link--last" href="#">html academy</a>
+            <a class="site-list__link site-list__link--right site-list__link--last" href="#">html academy</a>
           </li>
         </ul>
       </nav>
@@ -34,18 +34,18 @@
     <main class="page-main">
       <section class="header-main">
         <div class="header-main__bg">
-          <h1 class="visually-hidden">седона - лучшее место для отдыха</h1>
+          <h1 class="visually-hidden">седона лучшее место для отдыха</h1>
           <img class="header-main__pic" src="img/text-sedona-index.svg" alt="седона">
         </div>
       </section>
       <section class="intro">
-        <h2 class="intro__main title">седона - небольшой городок в аризоне, заслужавающий большего!</h2>
-        <p class="intro__description text">рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
+        <h2 class="intro__main intro__main--title title">седона &mdash; небольшой городок в аризоне, заслуживающий большего!</h2>
+        <p class="intro__description intro__description text">рассмотрим 5 причин, по которым седона круче, чем гранд каньон!</p>
       </section>
       <section class="edge">
         <div class="edge__item">
           <div class="edge__wrap">
-            <h3 class="title title--white edge__title">Настоящий городок</h3>
+            <h3 class="title title--white edge__title">Настоящий<br class="transfer"> городок</h3>
             <span class="edge__number edge__number--white">&mdash; №1 &mdash;</span>
             <p class="text edge__desc edge__desc--white">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
@@ -53,25 +53,25 @@
             <!-- <img src="img/main-city-mobile@1x.jpg" alt="фото городского мотеля"> -->
           </div>
         </div>
-        <div class="edge__item">
+        <div class="edge__item edge__item--point">
           <ul class="edge__list">
             <li class="edge__point edge__point--house">
               <b class="edge__title title">жилье</b>
-              <p class="edge__desc text">рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              <p class="edge__desc edge__desc--point text">рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
             <li class="edge__point edge__point--souvenirs">
               <b class="edge__title title">сувениры</b>
-              <p class="edge__desc text">не только китайского, но и местного производства!</p>
+              <p class="edge__desc edge__desc--point text">не только китайского,<br class="transfer transfer--change"> но и местного производства!</p>
             </li>
             <li class="edge__point edge__point--food">
               <b class="edge__title title">еда</b>
-              <p class="edge__desc text">всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              <p class="edge__desc edge__desc--point text">всегда заказывайте фирменный бургер,<br class="transfer"> вы не разочаруетесь!</p>
             </li>
           </ul>
         </div>
         <div class="edge__item edge__item--reverse">
-          <div class="edge__wrap">
-            <h3 class="title title--white edge__title">там есть мост дьявола</h3>
+          <div class="edge__wrap edge__wrap--second">
+            <h3 class="title title--white edge__title edge__title--second">там есть<br class="transfer"> мост дьявола</h3>
             <span class="edge__number edge__number--white">&mdash; №2 &mdash;</span>
             <p class="text edge__desc edge__desc--white">да, по нему можно пройти! если вы осмелитесь, конечно</p>
           </div>
@@ -79,21 +79,21 @@
             <!-- <img src="img/main-bridge-mobile@1x.jpg" alt="фото моста дьявола"> -->
           </div>
         </div>
-        <div class="edge__item">
+        <div class="edge__item edge__item--silver">
           <div class="edge__wrap edge__wrap--silver">
-            <h3 class="title edge__title">небольшая площадь</h3>
+            <h3 class="title edge__title edge__title--silver">небольшая<br class="transfer"> площадь</h3>
             <span class="edge__number">&mdash; №3 &mdash;</span>
-            <p class="text edge__desc">все интересные места находятся очень близко</p>
+            <p class="text edge__desc edge__desc--silver">все интересные места находятся очень близко</p>
           </div>
             <div class="edge__wrap edge__wrap--silver">
-              <h3 class="title edge__title">красивая дорога</h3>
+              <h3 class="title edge__title edge__title--silver">красивая<br class="transfer"> дорога</h3>
               <span class="edge__number">&mdash; №4 &mdash;</span>
-              <p class="text edge__desc">ехать в седону из лас-вегаса совсем не скучно!</p>
+              <p class="text edge__desc edge__desc--silver">ехать в седону из лас-вегаса совсем<br class="transfer"> не скучно!</p>
             </div>
           <div class="edge__wrap edge__wrap--silver">
-            <h3 class="title edge__title">мало туристов</h3>
+            <h3 class="title edge__title edge__title--silver">мало<br class="transfer"> туристов</h3>
             <span class="edge__number">&mdash; №5 &mdash;</span>
-            <p class="text edge__desc">большинство едет в гранд каньон и толпится там</p>
+            <p class="text edge__desc edge__desc--silver">большинство едет в гранд каньон и толпится там</p>
           </div>
         </div>
       </section>
@@ -101,7 +101,7 @@
         <div class="reserve__wrap">
           <h2 class="visually-hidden">поиск гостиницы</h2>
           <b class="reserve__title title">заинтересовались?</b>
-          <p class="reserve__text text">укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <p class="reserve__text text">укажите предполагаемые даты поездки, <br class="transfer"> и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <button class="reserve__button button" type="button">найти гостиницу</button>
         </div>
         <a class="reserve__map" href="#">
@@ -109,16 +109,14 @@
         </a>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer page-footer--index">
       <p class="page-footer__signature">#visitsedona</p>
       <div class="page-footer__icon-list social-icon">
         <a class="social-icon__link social-icon__link--twitter" aria-label="твитер" href="#"></a>
         <a class="social-icon__link social-icon__link--facebook" aria-label="фейсбук" href="#"></a>
         <a class="social-icon__link social-icon__link--youtube" aria-label="ютуб" href="#"></a>
       </div>
-      <p class="page-footer__develop">разработано
-        <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="логотип академии"></a>
-      </p>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__develop" aria-label="логотип академии">разработано</a>
     </footer>
   </div>
 </body>
