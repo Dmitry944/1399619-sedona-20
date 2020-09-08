@@ -104,21 +104,17 @@
 }
 
 .review__input {
-  font-family: "PT Sans", "Arial", sans-serif;
   width: 100%;
-  height: 58px;
-  line-height: 58px;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 22px;
+  padding: 14px 17px;
   background-color: @gray-light-bg;
-  border: none;
   box-sizing: border-box;
+  border: 4px solid transparent;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: @basic-black;
 
   &::placeholder {
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: bold;
     color: @basic-black;
   }
 
@@ -128,16 +124,13 @@
   }
 
   &:active {
-    border: 4px solid @gray-light;
+    border-color: @gray-light;
     background-color: @basic-white;
   }
 
-  &--name {
-    padding-top: 5px;
-  }
-
   &--contacts {
-    padding-top: 7px;
+    padding-top: 15px;
+    padding-bottom: 11px;
   }
 }
 
@@ -279,6 +272,7 @@
   background-color: @gray-light-bg;
   border: none;
   box-sizing: border-box;
+  resize: none;
 
   &::placeholder {
     font-size: 18px;
@@ -313,7 +307,7 @@
 
     &--name {
       position: relative;
-      padding-bottom: 72px;
+      padding-bottom: 69px;
       padding-left: 59px;
 
       &::before {
@@ -323,7 +317,7 @@
         height: 292px;
         top: 0;
         left: 0;
-        background-color: #dbdbdb;
+        background-color: @beige;
       }
     }
 
@@ -422,7 +416,7 @@
         height: 1px;
         top: 50%;
         left: -185px;
-        background-color: #dbdbdb;
+        background-color: @beige;
       }
 
       &::after {
@@ -432,7 +426,7 @@
         height: 1px;
         top: 50%;
         right: -185px;
-        background-color: #dbdbdb;
+        background-color: @beige;
       }
     }
 
@@ -452,7 +446,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 58px;
+    margin-top: 60px;
   }
 
   .review__button {
@@ -475,7 +469,7 @@
 
     &--name {
       padding-left: 80px;
-      padding-bottom: 68px;
+      padding-bottom: 66px;
     }
 
     &--effects {
@@ -529,6 +523,14 @@
     &--checkbox {
       margin-left: 2px;
       width: 203px;
+
+      &:nth-child(2) {
+        margin-left: 22px;
+      }
+
+      &:nth-child(3) {
+        margin-left: 21px;
+      }
     }
 
     &--mail {
