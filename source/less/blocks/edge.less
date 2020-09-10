@@ -185,7 +185,7 @@
     padding: 0;
     padding-top: 42px;
     padding-right: 33px;
-    padding-bottom: 45px;
+    padding-bottom: 42px;
     padding-left: 33px;
     box-sizing: border-box;
     flex-grow: 0;
@@ -195,15 +195,20 @@
     }
 
     &--silver {
-      padding-top: 43px;
+      padding-top: 42px;
       padding-right: 40px;
-      padding-bottom: 38px;
+      padding-bottom: 39px;
       padding-left: 40px;
+      border: none;
+
+      &:nth-child(2) {
+        padding-right: 50px;
+        padding-left: 50px;
+      }
     }
   }
 
   .edge__photo {
-    background-color: red;
     flex-grow: 1;
   }
 
@@ -214,7 +219,7 @@
   .edge__point {
     width: 33.333%;
     margin: 0;
-    padding-top: 157px;
+    padding-top: 160px;
     padding-right: 32px;
     padding-bottom: 60px;
     padding-left: 32px;
@@ -226,7 +231,7 @@
       &::before {
         width: 65px;
         height: 70px;
-        top: 60px;
+        top: 62px;
         left: 90px;
       }
     }
@@ -237,7 +242,7 @@
       &::before {
         width: 52px;
         height: 73px;
-        top: 56px;
+        top: 59px;
         left: 95px;
       }
     }
@@ -248,7 +253,7 @@
       &::before {
         width: 63px;
         height: 67px;
-        top: 62px;
+        top: 64px;
         left: 90px;
       }
     }
@@ -289,15 +294,39 @@
     }
 
     &--silver {
-      padding-top: 42px;
-      padding-bottom: 60px;
+      padding-top: 44px;
+      padding-bottom: 61px;
+    }
+  }
+
+  .edge__photo {
+    &--present {
+      position: relative;
+      height: 258px;
+      overflow: hidden;
+
+      & img {
+        position: absolute;
+        top: -65px;
+      }
+    }
+
+    &--reverse {
+      position: relative;
+      height: 256px;
+      overflow: hidden;
+
+      & img {
+        position: absolute;
+        top: -13px;
+      }
     }
   }
 
   .edge__point {
     padding-top: 160px;
     padding-right: 50px;
-    padding-bottom: 80px;
+    padding-bottom: 83px;
     padding-left: 50px;
 
     &--house {

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">git
+<html class="page" lang="ru">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8 ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -9,7 +10,11 @@
   <div class="page-body__wrap">
     <header class="page-header">
       <a href="#" class="page-header__logo">
-        <img src="img/logo-sedona-mobile.svg" alt="логотип сайта седона">
+        <picture>
+          <source media="(min-width:1280px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width:768px)" srcset="img/logo-sedona-tablet.svg">
+          <img src="img/logo-sedona-mobile.svg" alt="логотип сайта седона">
+        </picture>
       </a>
       <nav class="main-nav">
         <button type="button" class="main-nav__toggle main-nav__toggle--opened">
@@ -49,8 +54,12 @@
             <span class="edge__number edge__number--white">&mdash; №1 &mdash;</span>
             <p class="text edge__desc edge__desc--white">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-          <div class="edge__photo">
-            <!-- <img src="img/main-city-mobile@1x.jpg" alt="фото городского мотеля"> -->
+          <div class="edge__photo edge__photo--present">
+            <picture>
+              <source media="(min-width:1280px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+              <img src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@1x.jpg 1x, img/main-city-mobile@2x.jpg 2x" alt="фото городского мотеля">
+            </picture>
           </div>
         </div>
         <div class="edge__item edge__item--point">
@@ -75,8 +84,12 @@
             <span class="edge__number edge__number--white">&mdash; №2 &mdash;</span>
             <p class="text edge__desc edge__desc--white">да, по нему можно пройти! если вы осмелитесь, конечно</p>
           </div>
-          <div class="edge__photo">
-            <!-- <img src="img/main-bridge-mobile@1x.jpg" alt="фото моста дьявола"> -->
+          <div class="edge__photo edge__photo--reverse">
+            <picture>
+              <source media="(min-width:1280px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+              <img src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@1x.jpg 1x, img/main-bridge-mobile@2x.jpg 2x" alt="фото моста дьявола">
+            </picture>
           </div>
         </div>
         <div class="edge__item edge__item--silver">
@@ -105,7 +118,11 @@
           <button class="reserve__button button" type="button">найти гостиницу</button>
         </div>
         <a class="reserve__map" href="#">
-          <img src="img/bg-map-mobile@1x.jpg" alt="карта с указанием на ней городка седона">
+          <picture>
+            <source media="(min-width:1280px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+            <source media="(min-width:768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+            <img src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@1x.jpg 1x, img/bg-map-mobile@2x.jpg 2x" alt="карта с указанием на ней городка седона">
+          </picture>
         </a>
       </section>
     </main>
