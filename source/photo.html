@@ -2,14 +2,19 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
   <div class="page-body__wrap">
     <header class="page-header">
-      <a href="#" class="page-header__logo">
-        <img src="img/logo-sedona-mobile.svg" alt="логотип сайта седона">
+      <a href="index.html" class="page-header__logo">
+        <picture>
+          <source media="(min-width:1280px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width:768px)" srcset="img/logo-sedona-tablet.svg">
+          <img src="img/logo-sedona-mobile.svg" alt="логотип сайта седона">
+        </picture>
       </a>
       <nav class="main-nav">
         <button type="button" class="main-nav__toggle main-nav__toggle--closed">
@@ -46,7 +51,11 @@
         <h2 class="visually-hidden">галлерея</h2>
         <div class="gallery__post gallery__post--first">
           <a class="gallery__link">
-            <img class="gallery__photo gallery__photo--first" src="img/photo-sunset-mobile@1x.jpg" alt="фотография дороги на закате">
+            <picture>
+              <source media="(min-width:1280px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+              <img class="gallery__photo gallery__photo--first" src="img/photo-sunset-mobile@1x.jpg" srcset="img/photo-sunset-mobile@1x.jpg 1x, img/photo-sunset-mobile@2x.jpg 2x" alt="фотография дороги на закате">
+            </picture>
           </a>
           <div class="gallery__caption">
             <h3 class="title gallery__title">неродные просторы</h3>
@@ -56,7 +65,11 @@
         </div>
         <div class="gallery__post">
           <a class="gallery__link">
-            <img class="gallery__photo" src="img/photo-cactus-mobile@1x.jpg" alt="фотография растения">
+            <picture>
+              <source media="(min-width:1280px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+              <img class="gallery__photo" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@1x.jpg 1x, img/photo-cactus-mobile@2x.jpg 2x" alt="фотография растения">
+            </picture>
           </a>
           <div class="gallery__caption gallery__caption--flora">
             <h3 class="title gallery__title">местная растительность</h3>
@@ -66,7 +79,11 @@
         </div>
         <div class="gallery__post">
           <a class="gallery__link">
-            <img class="gallery__photo" src="img/photo-roads-mobile@1x.jpg" alt="фотография дороги в горах">
+            <picture>
+              <source media="(min-width:1280px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+              <img class="gallery__photo" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@1x.jpg 1x, img/photo-roads-mobile@2x.jpg 2x" alt="фотография дороги в горах">
+            </picture>
           </a>
           <div class="gallery__caption gallery__caption--road">
             <h3 class="title gallery__title">дорога на север</h3>
@@ -76,7 +93,11 @@
         </div>
         <div class="gallery__post">
           <a class="gallery__link">
-            <img class="gallery__photo" src="img/photo-bridge-mobile@1x.jpg" alt="фотография моста дьявола">
+            <picture>
+              <source media="(min-width:1280px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+              <img class="gallery__photo" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@1x.jpg 1x, img/photo-bridge-mobile@2x.jpg 2x" alt="фотография моста дьявола">
+            </picture>
           </a>
           <div class="gallery__caption gallery__caption--bridge">
             <h3 class="title gallery__title">мост дьявола</h3>
@@ -92,7 +113,11 @@
           <p class="presentation__desc text">смотрите видеопрезентацию и скорее за билетами, пока они<br class="transfer transfer--change"> не подорожали в очередной раз!</p>
         </div>
         <div class="presentation__video">
-          <img class="presentation__photo" src="img/video-mobile@1x.jpg" alt="видеопрезентация по городу седона">
+          <picture>
+            <source media="(min-width:1280px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width:768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="presentation__photo" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@1x.jpg 1x, img/video-mobile@2x.jpg 2x" alt="видеопрезентация по городу седона">
+          </picture>
           <div class="controls presentation__controls">
             <div class="controls__top-line">
               <div class="controls__scale">
