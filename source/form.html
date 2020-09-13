@@ -18,6 +18,10 @@
       </a>
       <nav class="main-nav">
         <button type="button" class="main-nav__toggle main-nav__toggle--closed">
+          <svg width="22px" height="22px">
+            <use xlink:href="img/sprite.svg#icon-cross"></use>
+            <use xlink:href="img/sprite.svg#icon-menu"></use>
+          </svg>
           <span class="visually-hidden">открыть меню</span>
         </button>
         <ul class="main-nav__list site-list site-list--closed">
@@ -45,7 +49,7 @@
       </section>
       <section class="intro intro--form">
         <h2 class="title intro__main intro__main--form">оставьте свой отзыв</h2>
-        <p class="text intro__description">помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <p class="text intro__description intro__description--form">помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </section>
       <form class="review" action="https://echo.htmlacademy.ru/courses" method="GET">
         <div class="review__section review__section--name">
@@ -129,13 +133,23 @@
     <footer class="page-footer page-footer--form">
       <p class="page-footer__signature">#visitsedona</p>
       <div class="page-footer__icon-list social-icon">
-        <a class="social-icon__link social-icon__link--twitter" aria-label="твитер" href="#"></a>
-        <a class="social-icon__link social-icon__link--facebook" aria-label="фейсбук" href="#"></a>
-        <a class="social-icon__link social-icon__link--youtube" aria-label="ютуб" href="#"></a>
+        <a class="social-icon__link" aria-label="твитер" href="#">
+          <svg class="social-icon__logo social-icon__logo--twitter">
+            <use xlink:href="img/sprite.svg#icon-twitter"></use>
+          </svg>
+        </a>
+        <a class="social-icon__link" aria-label="фейсбук" href="#">
+          <svg class="social-icon__logo social-icon__logo--facebook">
+            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+          </svg>
+        </a>
+        <a class="social-icon__link" aria-label="ютуб" href="#">
+          <svg class="social-icon__logo social-icon__logo--youtube">
+            <use xlink:href="img/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
       </div>
-      <p class="page-footer__develop">разработано
-        <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="логотип академии"></a>
-      </p>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__develop" aria-label="логотип академии">разработано</a>
     </footer>
   </div>
 </body>

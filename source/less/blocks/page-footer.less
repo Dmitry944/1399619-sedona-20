@@ -2,13 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 27px;
-  padding-right: 3px;
+  padding-top: 28px;
+  padding-right: 0;
   padding-bottom: 27px;
 
   &--index {
-    padding-top: 55px;
-    padding-right: 49px;
+    padding-top: 57px;
+    padding-right: 50px;
+  }
+
+  &--form {
+    padding-right: 3px;
   }
 }
 
@@ -66,5 +70,9 @@
 @media (min-width: @desktop-width) {
   .page-footer {
     padding: 0 118px;
+  }
+
+  .page-footer__develop {
+    padding-right: 41px;
   }
 }

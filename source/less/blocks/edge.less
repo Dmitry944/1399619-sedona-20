@@ -25,7 +25,7 @@
 
   &--point {
     padding-top: 35px;
-    padding-bottom: 35px;
+    padding-bottom: 34px;
   }
 
   &:first-child::before {
@@ -44,21 +44,21 @@
 .edge__title {
   text-align: center;
   margin: 0;
-  padding-top: 57px;
+  padding-top: 56px;
 
   &--second {
-    padding-top: 36px;
+    padding-top: 39px;
   }
 
   &--silver {
-    padding-top: 24px;
+    padding-top: 26px;
   }
 }
 
 .edge__number {
   display: block;
   line-height: 21px;
-  margin-top: 11px;
+  margin-top: 12px;
   margin-bottom: 17px;
   text-align: center;
 
@@ -70,11 +70,15 @@
 .edge__desc {
   line-height: 21px;
   margin: 0;
-  padding-bottom: 37px;
+  padding-bottom: 40px;
 
   &--point {
     padding: 0;
     margin-top: 17px;
+  }
+
+  &--second {
+    padding-bottom: 33px;
   }
 
   &--white {
@@ -82,7 +86,7 @@
   }
 
   &--silver {
-    padding-bottom: 25px;
+    padding-bottom: 23px;
   }
 }
 
@@ -93,62 +97,39 @@
 .edge__point {
   position: relative;
   padding-left: 70px;
-  margin-bottom: 26px;
+  margin-bottom: 25px;
 
   &:last-child {
     margin-bottom: 0;
+    padding-right: 20px;
   }
+}
 
+.edge__icon {
   &--house {
-    &::before {
-      content: "";
-      position: absolute;
-      width: 27px;
-      height: 37px;
-      left: 21px;
-      top: -9px;
-      background-image: url("../img/icon-house.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      padding-right: 11px;
-    }
+    position: absolute;
+    width: 39px;
+    height: 37px;
+    left: 21px;
+    top: -9px;
   }
 
   &--souvenirs {
     padding-right: 21px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 37px;
-      left: 25px;
-      top: -11px;
-      background-image: url("../img/icon-gift.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      padding-right: 11px;
-    }
+    position: absolute;
+    width: 32px;
+    height: 38px;
+    left: 25px;
+    top: -11px;
   }
 
   &--food {
     padding-right: 40px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 27px;
-      height: 36px;
-      left: 19px;
-      top: -7px;
-      background-image: url("../img/icon-burger.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      padding-right: 11px;
-    }
+    position: absolute;
+    width: 40px;
+    height: 35px;
+    left: 19px;
+    top: -7px;
   }
 }
 
@@ -219,48 +200,67 @@
   .edge__point {
     width: 33.333%;
     margin: 0;
-    padding-top: 160px;
-    padding-right: 32px;
+    padding-top: 158px;
+    padding-right: 25px;
     padding-bottom: 60px;
-    padding-left: 32px;
+    padding-left: 25px;
     text-align: center;
 
     &--house {
       order: 0;
-
-      &::before {
-        width: 65px;
-        height: 70px;
-        top: 62px;
-        left: 90px;
-      }
+      padding-right: 37px;
+      padding-left: 33px;
     }
 
     &--souvenirs {
       order: 2;
-
-      &::before {
-        width: 52px;
-        height: 73px;
-        top: 59px;
-        left: 95px;
-      }
+      padding-right: 32px;
+      padding-left: 27px;
     }
 
     &--food {
       order: 1;
+    }
 
-      &::before {
-        width: 63px;
-        height: 67px;
-        top: 64px;
-        left: 90px;
-      }
+    &:last-child {
+      padding-right: 37px;
+    }
+  }
+
+  .edge__icon {
+    &--house {
+      position: absolute;
+      width: 75px;
+      height: 72px;
+      left: 90px;
+      top: 59px;
+    }
+
+    &--souvenirs {
+      padding-right: 21px;
+      position: absolute;
+      width: 76px;
+      height: 76px;
+      left: 84px;
+      top: 56px;
+    }
+
+    &--food {
+      padding-right: 40px;
+      position: absolute;
+      width: 74px;
+      height: 84px;
+      left: 84px;
+      top: 54px;
     }
   }
 
   .edge__title {
     padding: 0;
+
+    &--second {
+      padding-top: 1px;
+    }
   }
 
   .edge__desc {
@@ -275,6 +275,10 @@
   .edge__number {
     margin-top: 13px;
     margin-bottom: -5px;
+
+    &--two {
+      margin-top: 14px;
+    }
   }
 }
 
@@ -285,6 +289,10 @@
     padding-right: 55px;
     padding-bottom: 56px;
     padding-left: 55px;
+
+    &--first {
+      padding-top: 49px;
+    }
 
     &--second {
       padding-top: 53px;
@@ -324,39 +332,46 @@
   }
 
   .edge__point {
-    padding-top: 160px;
-    padding-right: 50px;
-    padding-bottom: 83px;
-    padding-left: 50px;
+    padding-top: 158px;
+    padding-right: 47px;
+    padding-bottom: 79px;
+    padding-left: 47px;
 
     &--house {
       order: 0;
-
-      &::before {
-        left: 160px;
-        height: 74px;
-        top: 59px;
-      }
     }
 
     &--souvenirs {
+      padding-left: 57px;
+      padding-right: 43px;
       order: 2;
-
-      &::before {
-        left: 167px;
-        height: 75px;
-        top: 58px;
-      }
     }
 
     &--food {
       order: 1;
+    }
+  }
 
-      &::before {
-        left: 162px;
-        height: 69px;
-        top: 64px;
-      }
+  .edge__icon {
+    &--house {
+      width: 75px;
+      height: 74px;
+      left: 161px;
+      top: 57px;
+    }
+
+    &--souvenirs {
+      width: 76px;
+      height: 75px;
+      left: 170px;
+      top: 56px;
+    }
+
+    &--food {
+      width: 74px;
+      height: 69px;
+      left: 162px;
+      top: 62px;
     }
   }
 

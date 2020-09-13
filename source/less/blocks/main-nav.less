@@ -3,25 +3,17 @@
   padding: 0;
   border: none;
   background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
 
   &--closed {
-    &::after {
-      content: "";
-      position: absolute;
-      width: 23px;
-      height: 22px;
-      left: 277px;
-      top: 240px;
-      background-image: url("../img/icon-menu.svg");
-    }
+    position: absolute;
+    width: 23px;
+    height: 22px;
+    left: 277px;
+    top: 240px;
 
     &:hover,
     &:focus {
-      &::after {
-        opacity: 0.6;
-      }
+      opacity: 0.6;
     }
 
     &:active {
@@ -30,22 +22,15 @@
   }
 
   &--opened {
-    &::after {
-      content: "";
-      position: absolute;
-      width: 22px;
-      height: 22px;
-      top: 17px;
-      right: -300px;
-      background-image: url("../img/icon-cross.svg");
-      fill: @basic-white;
-    }
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 17px;
+    right: 20px;
 
     &:hover,
     &:focus {
-      &::after {
-        opacity: 0.6;
-      }
+      opacity: 0.6;
     }
 
     &:active {
