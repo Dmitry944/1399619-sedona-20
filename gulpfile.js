@@ -10,6 +10,8 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
+const del = require("del");
+const posthtml = require("gulp-posthtml");
 
 // Styles
 
@@ -24,7 +26,7 @@ const styles = () => {
     .pipe(csso())
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -36,10 +38,12 @@ const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
         imagemin.optipng({optimizationLevel: 3}),
-        imagemin.jpegtran({progressive: true}),
+        imagemin.mozjpeg({progressive: true}),
         imagemin.svgo()
     ]))
 }
+
+exports.images = images;
 
 const imgwebp = () => {
   return gulp.src("source/img/**/*.{png,jpg}")
@@ -47,18 +51,28 @@ const imgwebp = () => {
     .pipe(gulp.dest("source/img"))
 }
 
-exports.webp = webp;
+exports.imgwebp = imgwebp;
 
 //SVG-sprite
 
 const sprite = () => {
-  return gulp.src("source/img/**/icon-*.svg")
+  return gulp.src("source/img/icon-*.svg")
     .pipe(svgstore())
-    .pipe(rename(sprite.svg))
-    .pipe(gulp.dest("source/img"))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.sprite = sprite;
+
+//HTML
+
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(posthtml())
+    .pipe(gulp.dest("build"));
+  };
+
+exports.html = html;
 
 // Server
 
@@ -86,3 +100,39 @@ const watcher = () => {
 exports.default = gulp.series(
   styles, server, watcher
 );
+
+//Copy
+
+const copy = () => {
+  return gulp.src ([
+    "source/fonts/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**",
+    "source/*.ico"
+  ], {
+      base: "source"
+  })
+  .pipe(gulp.dest("build"));
+};
+
+exports.copy = copy;
+
+//del
+
+const clean = () => {
+  return del("build");
+};
+
+exports.clean = clean;
+
+const build = () => {
+  return gulp.series(
+    clean,
+    copy,
+    styles,
+    sprite,
+    html
+)();
+}
+
+exports.build = build;
