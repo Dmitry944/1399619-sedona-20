@@ -3,13 +3,20 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  display: none;
 
   &--closed {
-    position: absolute;
-    width: 23px;
-    height: 22px;
-    left: 277px;
-    top: 240px;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 23px;
+      height: 22px;
+      left: 277px;
+      top: 240px;
+      background-image: url("../img/icon-menu.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
     &:hover,
     &:focus {
@@ -22,11 +29,17 @@
   }
 
   &--opened {
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    top: 17px;
-    right: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      top: 17px;
+      left: 278px;
+      background-image: url("../img/icon-cross.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
 
     &:hover,
     &:focus {

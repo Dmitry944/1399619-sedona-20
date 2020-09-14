@@ -11,7 +11,6 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
-const posthtml = require("gulp-posthtml");
 
 // Styles
 
@@ -24,9 +23,9 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(csso())
-    .pipe(rename("style.css")) //styles.min.css
+    .pipe(rename("style.min.css")) //styles.min.css
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css")) // build/css
+    .pipe(gulp.dest("build/css")) // build/css
     .pipe(sync.stream());
 }
 
@@ -68,7 +67,6 @@ exports.sprite = sprite;
 
 const html = () => {
   return gulp.src("source/*.html")
-    .pipe(posthtml())
     .pipe(gulp.dest("build"));
   };
 
@@ -125,14 +123,12 @@ const clean = () => {
 
 exports.clean = clean;
 
-const build = () => {
-  return gulp.series(
-    clean,
-    copy,
-    styles,
-    sprite,
-    html
-)();
-}
+const build = gulp.series(
+  clean,
+  copy,
+  styles,
+  sprite,
+  html
+);
 
 exports.build = build;

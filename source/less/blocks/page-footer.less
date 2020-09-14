@@ -30,17 +30,26 @@
   padding-right: 36px;
   color: @basic-black;
 
-  &::after {
-    content: "";
+  &:hover,
+  &:focus {
+    svg {
+      fill: @basic-bg;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+  }
+
+  .page-footer__icon-academy {
     position: absolute;
     width: 29px;
     height: 38px;
     top: -7px;
     right: -3px;
-    background-image: url("../img/logo-htmlacademy.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    fill: @basic-black;
   }
 }
 
@@ -61,8 +70,9 @@
   .page-footer__develop {
     padding-right: 42px;
 
-    &::after {
-      right: 0;
+    .page-footer__icon-academy {
+      top: -9px;
+      right: 2px;
     }
   }
 }

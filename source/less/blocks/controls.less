@@ -33,7 +33,7 @@
 .controls__icon {
   position: absolute;
   border: none;
-  opacity: 0.8;
+  fill: @gray-controls;
 
   &--replay {
     bottom: 26px;
@@ -58,22 +58,23 @@
 
   &:hover,
   &:focus {
-    opacity: 1;
+    fill: @black-light;
   }
 
   &:active {
+    fill: @black-light;
     opacity: 0.3;
   }
 }
 
 @media (min-width: @tablet-width) {
   .controls__top-line {
-    height: 93px;
+    height: 94px;
     width: 100%;
   }
 
   .controls__scale {
-    top: 47px;
+    top: 45px;
     left: 93px;
     width: 389px;
   }
@@ -89,26 +90,28 @@
     background-color: transparent;
 
     &--replay {
-      bottom: 38px;
-      left: 27px;
+      bottom: 40px;
+      left: 29px;
     }
 
     &--subtitles {
-      bottom: 37px;
-      right: 100px;
+      bottom: 39px;
+      right: 98px;
     }
 
     &--fullscreen {
-      bottom: 37px;
+      bottom: 39px;
       right: 47px;
     }
 
     &:hover,
     &:focus {
+      fill: @basic-white;
       opacity: 0.6;
     }
 
     &:active {
+      fill: @basic-white;
       opacity: 0.3;
     }
   }
@@ -131,21 +134,17 @@
     left: 112px;
   }
 
-  .controls__replay {
-    position: absolute;
-    bottom: 37px;
-    left: 35px;
-  }
+  .controls__icon {
+    &--replay {
+      left: 28px;
+    }
 
-  .controls__subtitles {
-    position: absolute;
-    bottom: 37px;
-    right: 92px;
-  }
+    &--subtitles {
+      right: 100px;
+    }
 
-  .controls__fullscreen {
-    position: absolute;
-    bottom: 37px;
-    right: 47px;
+    &--fullscreen {
+      right: 49px;
+    }
   }
 }
