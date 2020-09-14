@@ -4,11 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <script src="https://api-maps.yandex.ru/2.1/?apikey92df1959-32d7-4deb-b3dc-f1cb161b749e&lang=ru_RU" type="text/javascript"></script>
-  <script src="js/map.js"></script>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page-body">
   <div class="page-body__wrap">
@@ -128,12 +124,9 @@
           <h2 class="visually-hidden">поиск гостиницы</h2>
           <b class="reserve__title title">заинтересовались?</b>
           <p class="reserve__text text">укажите предполагаемые даты поездки, <br class="transfer"> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          <form action="#" method="GET">
-            <button class="reserve__button button" type="submit">найти гостиницу</button>
-          </form>
+          <a href="form.html" class="reserve__button button">найти гостиницу</a>
         </div>
-        <div id="map" style="width: 100%;
-  height: 350px;"></div>
+        <div id="map" class="reserve__map"></div>
       </section>
     </main>
     <footer class="page-footer page-footer--index">
@@ -156,11 +149,13 @@
         </a>
       </div>
         <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__develop" aria-label="логотип академии">разработано
-          <svg class="page-footer__icon-academy" width="27px" height="34px">
+          <svg class="page-footer__icon-academy" width="27" height="34">
             <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use>
           </svg>
         </a>
     </footer>
   </div>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey92df1959-32d7-4deb-b3dc-f1cb161b749e&lang=ru_RU"></script>
+  <script src="js/map.js"></script>
 </body>
 </html>

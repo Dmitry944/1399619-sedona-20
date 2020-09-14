@@ -22,10 +22,11 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
-    .pipe(rename("style.min.css")) //styles.min.css
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css")) // build/css
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -77,7 +78,7 @@ exports.html = html;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -87,17 +88,6 @@ const server = (done) => {
 }
 
 exports.server = server;
-
-// Watcher
-
-const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
-}
-
-exports.default = gulp.series(
-  styles, server, watcher
-);
 
 //Copy
 
@@ -132,3 +122,13 @@ const build = gulp.series(
 );
 
 exports.build = build;
+
+
+// Watcher
+
+const watcher = () => {
+  gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/*.html").on("change", sync.reload);
+}
+
+exports.default = gulp.series(build, server, watcher);
