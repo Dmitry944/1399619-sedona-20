@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page-body">
   <div class="page-body__wrap">
@@ -45,12 +45,12 @@
       </section>
       <section class="intro intro--gallery">
         <h2 class="title intro__main intro__main--gallery">фото и видео</h2>
-        <p class="text intro__description">не можете решиться на путешествие из-за курса? фотографии помогут вам забыть о политике и экономике.</p>
+        <p class="text intro__description intro__description--gallery">не можете решиться на путешествие из-за курса? фотографии помогут вам забыть о политике и экономике.</p>
       </section>
       <section class="gallery">
         <h2 class="visually-hidden">галлерея</h2>
         <div class="gallery__post gallery__post--first">
-          <a class="gallery__link">
+          <a href="img/photo-sunset-desktop@1x.jpg" class="gallery__link">
             <picture>
               <source media="(min-width:1280px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
               <source media="(min-width:768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
@@ -60,11 +60,15 @@
           <div class="gallery__caption">
             <h3 class="title gallery__title">неродные просторы</h3>
             <p class="gallery__author">Автор фото: Борис</p>
-            <button class="gallery__button" type="button">1350</button>
+            <button class="gallery__button" type="button">1350
+              <svg class="gallery__icon-like" width="23" height="21">
+                <use xlink:href="img/sprite.svg#icon-like"></use>
+              </svg>
+            </button>
           </div>
         </div>
         <div class="gallery__post">
-          <a class="gallery__link">
+          <a href="img/photo-cactus-desktop@1x.jpg" class="gallery__link">
             <picture>
               <source media="(min-width:1280px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
               <source media="(min-width:768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
@@ -74,11 +78,15 @@
           <div class="gallery__caption gallery__caption--flora">
             <h3 class="title gallery__title">местная растительность</h3>
             <p class="gallery__author">Автор фото: Сергей</p>
-            <button class="gallery__button" type="button">143</button>
+            <button class="gallery__button" type="button">143
+              <svg class="gallery__icon-like" width="23" height="21">
+                <use xlink:href="img/sprite.svg#icon-like"></use>
+              </svg>
+            </button>
           </div>
         </div>
         <div class="gallery__post">
-          <a class="gallery__link">
+          <a href="img/photo-roads-desktop@1x.jpg" class="gallery__link">
             <picture>
               <source media="(min-width:1280px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
               <source media="(min-width:768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
@@ -88,11 +96,15 @@
           <div class="gallery__caption gallery__caption--road">
             <h3 class="title gallery__title">дорога на север</h3>
             <p class="gallery__author">Автор фото: Петр</p>
-            <button class="gallery__button" type="button">96</button>
+            <button class="gallery__button" type="button">96
+              <svg class="gallery__icon-like" width="23" height="21">
+                <use xlink:href="img/sprite.svg#icon-like"></use>
+              </svg>
+            </button>
           </div>
         </div>
         <div class="gallery__post">
-          <a class="gallery__link">
+          <a href="img/photo-bridge-desktop@1x.jpg" class="gallery__link">
             <picture>
               <source media="(min-width:1280px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
               <source media="(min-width:768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
@@ -102,7 +114,11 @@
           <div class="gallery__caption gallery__caption--bridge">
             <h3 class="title gallery__title">мост дьявола</h3>
             <p class="gallery__author">Автор фото: Антон</p>
-            <button class="gallery__button" type="button">254</button>
+            <button class="gallery__button" type="button">254
+              <svg class="gallery__icon-like" width="23" height="21">
+                <use xlink:href="img/sprite.svg#icon-like"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </section>
@@ -124,9 +140,21 @@
                 <span class="controls__toggle"></span>
               </div>
             </div>
-            <button class="controls__replay" type="button"></button>
-            <button class="controls__subtitles" type="button"></button>
-            <button class="controls__fullscreen" type="button"></button>
+            <button class="controls__icon controls__icon--replay" type="button">
+              <svg width="16" height="20">
+                <use xlink:href="img/sprite.svg#icon-video-replay"></use>
+              </svg>
+            </button>
+            <button class="controls__icon controls__icon--subtitles" type="button">
+              <svg width="32" height="20">
+                <use xlink:href="img/sprite.svg#icon-video-subtitles"></use>
+              </svg>
+            </button>
+            <button class="controls__icon controls__icon--fullscreen" type="button">
+              <svg width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon-video-fullscreen"></use>
+              </svg>
+            </button>
             <div class="controls__bottom-line"></div>
           </div>
         </div>
@@ -135,13 +163,27 @@
     <footer class="page-footer">
       <p class="page-footer__signature">#visitsedona</p>
       <div class="page-footer__icon-list social-icon">
-        <a class="social-icon__link social-icon__link--twitter" aria-label="твитер" href="#"></a>
-        <a class="social-icon__link social-icon__link--facebook" aria-label="фейсбук" href="#"></a>
-        <a class="social-icon__link social-icon__link--youtube" aria-label="ютуб" href="#"></a>
+        <a class="social-icon__link" aria-label="твитер" href="#">
+          <svg class="social-icon__logo social-icon__logo--twitter">
+            <use xlink:href="img/sprite.svg#icon-twitter"></use>
+          </svg>
+        </a>
+        <a class="social-icon__link" aria-label="фейсбук" href="#">
+          <svg class="social-icon__logo social-icon__logo--facebook">
+            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+          </svg>
+        </a>
+        <a class="social-icon__link" aria-label="ютуб" href="#">
+          <svg class="social-icon__logo social-icon__logo--youtube">
+            <use xlink:href="img/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
       </div>
-      <p class="page-footer__develop">разработано
-        <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="логотип академии"></a>
-      </p>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__develop" aria-label="логотип академии">разработано
+          <svg class="page-footer__icon-academy" width="27" height="34">
+            <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use>
+          </svg>
+        </a>
     </footer>
   </div>
 </body>

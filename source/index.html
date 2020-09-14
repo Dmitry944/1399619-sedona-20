@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 <head>
-  <meta charset="UTF-8 ">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page-body">
   <div class="page-body__wrap">
@@ -17,7 +17,7 @@
         </picture>
       </a>
       <nav class="main-nav">
-        <button type="button" class="main-nav__toggle main-nav__toggle--opened">
+        <button type="button" class="main-nav__toggle main-nav__toggle--opened"> <!--переключатель состояния меню и внешний вид кнопки-->
           <span class="visually-hidden">открыть меню</span>
         </button>
         <ul class="main-nav__list site-list site-list--closed">
@@ -49,7 +49,7 @@
       </section>
       <section class="edge">
         <div class="edge__item">
-          <div class="edge__wrap">
+          <div class="edge__wrap edge__wrap--first">
             <h3 class="title title--white edge__title">Настоящий<br class="transfer"> городок</h3>
             <span class="edge__number edge__number--white">&mdash; №1 &mdash;</span>
             <p class="text edge__desc edge__desc--white">Седона не аттракцион для туристов, там течет своя жизнь</p>
@@ -65,14 +65,23 @@
         <div class="edge__item edge__item--point">
           <ul class="edge__list">
             <li class="edge__point edge__point--house">
+              <svg class="edge__icon edge__icon--house">
+                <use xlink:href="img/sprite.svg#icon-house"></use>
+              </svg>
               <b class="edge__title title">жилье</b>
               <p class="edge__desc edge__desc--point text">рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
             <li class="edge__point edge__point--souvenirs">
+              <svg class="edge__icon edge__icon--souvenirs">
+                <use xlink:href="img/sprite.svg#icon-gift"></use>
+              </svg>
               <b class="edge__title title">сувениры</b>
               <p class="edge__desc edge__desc--point text">не только китайского,<br class="transfer transfer--change"> но и местного производства!</p>
             </li>
             <li class="edge__point edge__point--food">
+              <svg class="edge__icon edge__icon--food">
+                <use xlink:href="img/sprite.svg#icon-burger"></use>
+              </svg>
               <b class="edge__title title">еда</b>
               <p class="edge__desc edge__desc--point text">всегда заказывайте фирменный бургер,<br class="transfer"> вы не разочаруетесь!</p>
             </li>
@@ -81,8 +90,8 @@
         <div class="edge__item edge__item--reverse">
           <div class="edge__wrap edge__wrap--second">
             <h3 class="title title--white edge__title edge__title--second">там есть<br class="transfer"> мост дьявола</h3>
-            <span class="edge__number edge__number--white">&mdash; №2 &mdash;</span>
-            <p class="text edge__desc edge__desc--white">да, по нему можно пройти! если вы осмелитесь, конечно</p>
+            <span class="edge__number edge__number--white edge__number--two">&mdash; №2 &mdash;</span>
+            <p class="text edge__desc edge__desc--white edge__desc--second">да, по нему можно пройти! если вы осмелитесь, конечно</p>
           </div>
           <div class="edge__photo edge__photo--reverse">
             <picture>
@@ -115,26 +124,38 @@
           <h2 class="visually-hidden">поиск гостиницы</h2>
           <b class="reserve__title title">заинтересовались?</b>
           <p class="reserve__text text">укажите предполагаемые даты поездки, <br class="transfer"> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          <button class="reserve__button button" type="button">найти гостиницу</button>
+          <a href="form.html" class="reserve__button button">найти гостиницу</a>
         </div>
-        <a class="reserve__map" href="#">
-          <picture>
-            <source media="(min-width:1280px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
-            <source media="(min-width:768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
-            <img src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@1x.jpg 1x, img/bg-map-mobile@2x.jpg 2x" alt="карта с указанием на ней городка седона">
-          </picture>
-        </a>
+        <div id="map" class="reserve__map"></div>
       </section>
     </main>
     <footer class="page-footer page-footer--index">
       <p class="page-footer__signature">#visitsedona</p>
       <div class="page-footer__icon-list social-icon">
-        <a class="social-icon__link social-icon__link--twitter" aria-label="твитер" href="#"></a>
-        <a class="social-icon__link social-icon__link--facebook" aria-label="фейсбук" href="#"></a>
-        <a class="social-icon__link social-icon__link--youtube" aria-label="ютуб" href="#"></a>
+        <a class="social-icon__link" aria-label="твитер" href="#">
+          <svg class="social-icon__logo social-icon__logo--twitter">
+            <use xlink:href="img/sprite.svg#icon-twitter"></use>
+          </svg>
+        </a>
+        <a class="social-icon__link" aria-label="фейсбук" href="#">
+          <svg class="social-icon__logo social-icon__logo--facebook">
+            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+          </svg>
+        </a>
+        <a class="social-icon__link" aria-label="ютуб" href="#">
+          <svg class="social-icon__logo social-icon__logo--youtube">
+            <use xlink:href="img/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
       </div>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__develop" aria-label="логотип академии">разработано</a>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__develop" aria-label="логотип академии">разработано
+          <svg class="page-footer__icon-academy" width="27" height="34">
+            <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use>
+          </svg>
+        </a>
     </footer>
   </div>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey92df1959-32d7-4deb-b3dc-f1cb161b749e&lang=ru_RU"></script>
+  <script src="js/map.js"></script>
 </body>
 </html>

@@ -3,8 +3,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
+  display: none;
 
   &--closed {
     &::after {
@@ -15,13 +14,13 @@
       left: 277px;
       top: 240px;
       background-image: url("../img/icon-menu.svg");
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     &:hover,
     &:focus {
-      &::after {
-        opacity: 0.6;
-      }
+      opacity: 0.6;
     }
 
     &:active {
@@ -30,22 +29,21 @@
   }
 
   &--opened {
-    &::after {
+    &::before {
       content: "";
       position: absolute;
       width: 22px;
       height: 22px;
       top: 17px;
-      right: -300px;
+      left: 278px;
       background-image: url("../img/icon-cross.svg");
-      fill: @basic-white;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
     &:hover,
     &:focus {
-      &::after {
-        opacity: 0.6;
-      }
+      opacity: 0.6;
     }
 
     &:active {

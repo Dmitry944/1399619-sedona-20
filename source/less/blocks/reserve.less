@@ -1,3 +1,7 @@
+.reserve {
+  position: relative;
+}
+
 .reserve__wrap {
   display: flex;
   flex-direction: column;
@@ -21,15 +25,28 @@
 .reserve__button {
   display: block;
   width: 280px;
-  margin-top: 14px;
+  margin-top: 13px;
   padding-top: 14px;
   padding-bottom: 18px;
+
+  &:hover,
+  &:focus {
+    background-color: @hover-bg;
+  }
+
+  &:active {
+    background-color: @active-bg;
+    color: @gray-opacity;
+  }
+
+  &:disabled {
+    background-color: @gray-light;
+  }
 }
 
 .reserve__map {
-  & img {
-    display: block;
-  }
+  width: 100%;
+  height: 350px;
 }
 
 @media (min-width: @tablet-width) {
@@ -56,13 +73,17 @@
 
 @media (min-width: @desktop-width) {
   .reserve__wrap {
-    padding-top: 62px;
+    padding-top: 55px;
     padding-right: 383px;
     padding-bottom: 66px;
     padding-left: 382px;
   }
 
   .reserve__button {
-    margin-top: 32px;
+    margin-top: 29px;
+  }
+
+  .reserve__text {
+    margin-top: 35px;
   }
 }

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="page-body">
   <div class="page-body__wrap">
@@ -45,18 +45,18 @@
       </section>
       <section class="intro intro--form">
         <h2 class="title intro__main intro__main--form">оставьте свой отзыв</h2>
-        <p class="text intro__description">помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <p class="text intro__description intro__description--form">помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </section>
       <form class="review" action="https://echo.htmlacademy.ru/courses" method="GET">
         <div class="review__section review__section--name">
           <span class="review__title review__title--name title">представьтесь:</span>
           <div class="review__item">
             <label class="review__label review__label--name text" for="name">имя*:</label>
-            <input class="review__input" type="text" name="name" id="name" placeholder="Петр">
+            <input class="review__input" type="text" name="name" id="name" placeholder="Петр" required>
           </div>
           <div class="review__item">
             <label class="review__label review__label--name text" for="surname">фамилия*:</label>
-            <input class="review__input" type="text" name="surname" id="surname" placeholder="Иванов">
+            <input class="review__input" type="text" name="surname" id="surname" placeholder="Иванов" required>
           </div>
           <div class="review__item">
             <label class="review__label review__label--name text" for="patronymic">отчество:</label>
@@ -69,13 +69,13 @@
             <div class="review__item review__item--contacts">
               <label class="review__label review__label--contacts text" for="contact-number"><span class="review__contacts-phone">контактный</span> телефон*:</label>
               <div class="review__wrap review__wrap--phone">
-                <input class="review__input review__input--contacts " type="text" name="contact-number" id="contact-number" placeholder="Введите телефон">
+                <input class="review__input review__input--contacts " type="tel" name="contact-number" id="contact-number" placeholder="Введите телефон" required>
               </div>
             </div>
             <div class="review__item review__item--contacts review__item--mail">
               <label class="review__label review__label--contacts review__label--mail text" for="e-mail">электронная почта*:</label>
               <div class="review__wrap review__wrap--mail">
-                <input class="review__input review__input--contacts" type="text" name="e-mail" id="e-mail" placeholder="Введите e-mail">
+                <input class="review__input review__input--contacts" type="email" name="e-mail" id="e-mail" placeholder="Введите e-mail" required>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@
           <span class="review__title review__title--strip title">посещенные достопримечательности:</span>
           <div class="review__inner review__inner--sight">
             <div class="review__item review__item--checkbox">
-              <input class="review__checkbox"type="checkbox" name="attractions" id="devil-bridge" value="devil-bridge" checked>
+              <input class="review__checkbox" type="checkbox" name="attractions" id="devil-bridge" value="devil-bridge" checked>
               <label class="review__label review__label--checkbox" for="devil-bridge" >Мост Дьявола</label>
             </div>
             <div class="review__item review__item--checkbox">
@@ -125,17 +125,43 @@
           </div>
         </div>
       </form>
+      <div class="fault">
+        <p class="fault__title title">что-то пошло не так!</p>
+        <p class="fault__text text">проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button type="button" class="fault__button button">ок</button>
+      </div>
+      <div class="sending">
+        <p class="sending__title title">ваш отзыв отправлен!</p>
+        <p class="sending__text text">спасибо за ваше участие, ваш отзыв уже поступил к нам. в ближайшее время мы опубликуем его на сайте.</p>
+        <div class="sending__inner">
+          <button type="button" class="sending__button button">закрыть окно</button>
+        </div>
+      </div>
     </main>
     <footer class="page-footer page-footer--form">
       <p class="page-footer__signature">#visitsedona</p>
       <div class="page-footer__icon-list social-icon">
-        <a class="social-icon__link social-icon__link--twitter" aria-label="твитер" href="#"></a>
-        <a class="social-icon__link social-icon__link--facebook" aria-label="фейсбук" href="#"></a>
-        <a class="social-icon__link social-icon__link--youtube" aria-label="ютуб" href="#"></a>
+        <a class="social-icon__link" aria-label="твитер" href="#">
+          <svg class="social-icon__logo social-icon__logo--twitter">
+            <use xlink:href="img/sprite.svg#icon-twitter"></use>
+          </svg>
+        </a>
+        <a class="social-icon__link" aria-label="фейсбук" href="#">
+          <svg class="social-icon__logo social-icon__logo--facebook">
+            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+          </svg>
+        </a>
+        <a class="social-icon__link" aria-label="ютуб" href="#">
+          <svg class="social-icon__logo social-icon__logo--youtube">
+            <use xlink:href="img/sprite.svg#icon-youtube"></use>
+          </svg>
+        </a>
       </div>
-      <p class="page-footer__develop">разработано
-        <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="логотип академии"></a>
-      </p>
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__develop" aria-label="логотип академии">разработано
+          <svg class="page-footer__icon-academy" width="27" height="34">
+            <use xlink:href="img/sprite.svg#icon-logo-htmlacademy"></use>
+          </svg>
+        </a>
     </footer>
   </div>
 </body>
