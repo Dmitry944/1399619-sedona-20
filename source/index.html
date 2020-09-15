@@ -40,7 +40,7 @@
       <section class="header-main">
         <div class="header-main__bg">
           <h1 class="visually-hidden">седона лучшее место для отдыха</h1>
-          <img class="header-main__pic" src="img/text-sedona-index.svg" alt="седона">
+          <img class="header-main__pic" src="img/text-sedona-index.svg" width="460px" height="350px" alt="седона">
         </div>
       </section>
       <section class="intro">
@@ -56,6 +56,9 @@
           </div>
           <div class="edge__photo edge__photo--present">
             <picture>
+              <source type="image/webp" media="(min-width:1280px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:768px)" srcset="img/main-city-tablet@1x.webp 1x, img/main-city-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/main-city-mobile@1x.webp 1x, img/main-city-mobile@2x.webp 2x">
               <source media="(min-width:1280px)" srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
               <source media="(min-width:768px)" srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
               <img src="img/main-city-mobile@1x.jpg" srcset="img/main-city-mobile@1x.jpg 1x, img/main-city-mobile@2x.jpg 2x" alt="фото городского мотеля">
@@ -65,21 +68,21 @@
         <div class="edge__item edge__item--point">
           <ul class="edge__list">
             <li class="edge__point edge__point--house">
-              <svg class="edge__icon edge__icon--house">
+              <svg class="edge__icon edge__icon--house" width="75px" height="72px">
                 <use xlink:href="img/sprite.svg#icon-house"></use>
               </svg>
               <b class="edge__title title">жилье</b>
               <p class="edge__desc edge__desc--point text">рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </li>
             <li class="edge__point edge__point--souvenirs">
-              <svg class="edge__icon edge__icon--souvenirs">
+              <svg class="edge__icon edge__icon--souvenirs" width="63px" height="75px">
                 <use xlink:href="img/sprite.svg#icon-gift"></use>
               </svg>
               <b class="edge__title title">сувениры</b>
               <p class="edge__desc edge__desc--point text">не только китайского,<br class="transfer transfer--change"> но и местного производства!</p>
             </li>
             <li class="edge__point edge__point--food">
-              <svg class="edge__icon edge__icon--food">
+              <svg class="edge__icon edge__icon--food" width="76px" height="69px">
                 <use xlink:href="img/sprite.svg#icon-burger"></use>
               </svg>
               <b class="edge__title title">еда</b>
@@ -95,6 +98,9 @@
           </div>
           <div class="edge__photo edge__photo--reverse">
             <picture>
+              <source type="image/webp" media="(min-width:1280px)" srcset="img/main-bridge-desktop@1x.webp 1x, img/main-bridge-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width:768px)" srcset="img/main-bridge-tablet@1x.webp 1x, img/main-bridge-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/main-bridge-mobile@1x.webp 1x, img/main-bridge-mobile@2x.webp 2x">
               <source media="(min-width:1280px)" srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
               <source media="(min-width:768px)" srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
               <img src="img/main-bridge-mobile@1x.jpg" srcset="img/main-bridge-mobile@1x.jpg 1x, img/main-bridge-mobile@2x.jpg 2x" alt="фото моста дьявола">
@@ -133,17 +139,17 @@
       <p class="page-footer__signature">#visitsedona</p>
       <div class="page-footer__icon-list social-icon">
         <a class="social-icon__link" aria-label="твитер" href="#">
-          <svg class="social-icon__logo social-icon__logo--twitter">
+          <svg class="social-icon__logo social-icon__logo--twitter" width="18px" height="15px">
             <use xlink:href="img/sprite.svg#icon-twitter"></use>
           </svg>
         </a>
         <a class="social-icon__link" aria-label="фейсбук" href="#">
-          <svg class="social-icon__logo social-icon__logo--facebook">
+          <svg class="social-icon__logo social-icon__logo--facebook" width="8px" height="19px">
             <use xlink:href="img/sprite.svg#icon-facebook"></use>
           </svg>
         </a>
         <a class="social-icon__link" aria-label="ютуб" href="#">
-          <svg class="social-icon__logo social-icon__logo--youtube">
+          <svg class="social-icon__logo social-icon__logo--youtube" width="20px" height="14px">
             <use xlink:href="img/sprite.svg#icon-youtube"></use>
           </svg>
         </a>
